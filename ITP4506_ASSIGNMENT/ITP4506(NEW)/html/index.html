@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+
+    <script type="text/javascript" src="../js/vendor/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/web_logic/index.js"></script>
+
+    <style>
+        .choose {
+            background-color: aqua;
+        }
+
+        .defalut_tab {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="2">
+                Login
+            </th>
+        </tr>
+        <form id="login_form">
+            <tr>
+                <td>
+                    User name: 
+                </td>
+                <td>
+                    <input type="text" id="user_name" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password: 
+                </td>
+                <td>
+                    <input type="text" id="user_pass" required/>
+                </td>
+            </tr>
+        </form>
+        <tr>
+            <td colspan="2">
+                <a href="register.html"><button>Register</button></a>
+                <input id="login" form="login_form" type="submit" value="Login"/>
+                <br/>
+                <a href="forget_password.html">Forgot Password</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
