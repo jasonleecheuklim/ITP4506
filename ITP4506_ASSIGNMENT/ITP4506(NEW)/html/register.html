@@ -8,12 +8,12 @@
 
     <script type="text/javascript" src="../js/vendor/jquery-1.11.2.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-            $("#register_form").submit(function(){
+        $(document).ready(function () {
+            $("#register_form").submit(function () {
                 alert("Submitted successfully")
             })
 
-            $("#back").click(function(){
+            $("#back").click(function () {
                 window.location.href = "index.html"
             })
         })
@@ -21,46 +21,46 @@
 
 </head>
 <body>
-    <table border="1">
-        <form id="register_form" action="index.html">
-            <tr>
-                <th colspan="2">
-                    Register
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    user name: 
-                </td>
-                <td>
-                    <input type="text" required/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Password: 
-                </td>
-                <td>
-                    <input type="text" required/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Confirm Password: 
-                </td>
-                <td>
-                    <input type="text" required/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" id="back" value="Back">
-                </td>
-                <td>
-                    <input type="submit" value="Submit"/>
-                </td>
-            </tr>
-        </form>
-    </table>
+<table border="1">
+    <form id="register_form" action="index.html">
+        <tr>
+            <th colspan="2">
+                Register
+            </th>
+        </tr>
+        <tr>
+            <td>
+                user name:
+            </td>
+            <td>
+                <input type="text" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input type="text" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Confirm Password:
+            </td>
+            <td>
+                <input type="text" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="back" value="Back">
+            </td>
+            <td>
+                <input type="submit" value="Submit"/>
+            </td>
+        </tr>
+    </form>
+</table>
 </body>
 </html>

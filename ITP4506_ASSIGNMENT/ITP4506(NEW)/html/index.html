@@ -20,38 +20,40 @@
     </style>
 </head>
 <body>
-    <table border="1">
+<table border="1">
+    <tr>
+        <th colspan="2">
+            Login
+        </th>
+    </tr>
+    <form id="login_form">
         <tr>
-            <th colspan="2">
-                Login
-            </th>
-        </tr>
-        <form id="login_form">
-            <tr>
-                <td>
-                    User name: 
-                </td>
-                <td>
-                    <input type="text" id="user_name" required/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Password: 
-                </td>
-                <td>
-                    <input type="text" id="user_pass" required/>
-                </td>
-            </tr>
-        </form>
-        <tr>
-            <td colspan="2">
-                <a href="register.html"><button>Register</button></a>
-                <input id="login" form="login_form" type="submit" value="Login"/>
-                <br/>
-                <a href="forget_password.html">Forgot Password</a>
+            <td>
+                User name:
+            </td>
+            <td>
+                <input type="text" id="user_name" required/>
             </td>
         </tr>
-    </table>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input type="text" id="user_pass" required/>
+            </td>
+        </tr>
+    </form>
+    <tr>
+        <td colspan="2">
+            <a href="register.html">
+                <button>Register</button>
+            </a>
+            <input id="login" form="login_form" type="submit" value="Login"/>
+            <br/>
+            <a href="forget_password.html">Forgot Password</a>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
