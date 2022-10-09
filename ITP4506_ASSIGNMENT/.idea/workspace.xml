@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46675ef3-df41-41ca-98a1-1d1b8c991f56" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/fontAwesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/hero-slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/owl-carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/tooplate-style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_home.js" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/vendor/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/vendor/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/vendor/jquery-1.11.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/vendor/npm.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +88,7 @@
       <workItem from="1665222400693" duration="34000" />
       <workItem from="1665222443640" duration="634000" />
       <workItem from="1665248192605" duration="2412000" />
-      <workItem from="1665288411707" duration="3960000" />
+      <workItem from="1665288411707" duration="11377000" />
     </task>
     <servers />
   </component>

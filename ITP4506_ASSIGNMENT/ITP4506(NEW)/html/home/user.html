@@ -17,79 +17,72 @@
     </style>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../../css/fontAwesome.css">
-    <link rel="stylesheet" href="../../css/hero-slider.css">
-    <link rel="stylesheet" href="../../css/owl-carousel.css">
-    <link rel="stylesheet" href="../../css/datepicker.css">
-    <link rel="stylesheet" href="../../css/tooplate-style.css">
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/customer.css">
 
 </head>
 <body>
-
-<table border="1">
-    <div class="col-md-5 col-md-offset-1">
-        <section id="first-tab-group" class="tabgroup">
-            <div id="tab1">
-                <div class="submit-form">
-                    <tr>
-                        <th colspan="2">
-                            Booking
-                        </th>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="radio" name="travel" value="one_way"/>ONEWAY
-                            <input type="radio" name="travel" value="to_fro" checked/>ROUND
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            FROM: <br/>
-                            <input type="text" id="from_where"/>
-                            <div id="from_where_list"></div>
-                        </td>
-                        <td>
-                            TO: <br/>
-                            <input type="text" id="to_where"/>
-                            <div id="to_where_list"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+<section class="banner">
+    <table border="1">
+        <div>
+            <th colspan="2">
+                Booking
+            </th>
+        </div>
+        <tr>
+            <td colspan="2">
+                <input type="radio" name="travel" value="one_way"/>ONEWAY
+                <input type="radio" name="travel" value="to_fro" checked/>ROUND
+            </td>
+        </tr>
+        <tr>
+            <td>
+                FROM: <br/>
+                <input type="text" id="from_where"/>
+                <div id="from_where_list"></div>
+            </td>
+            <td>
+                TO: <br/>
+                <input type="text" id="to_where"/>
+                <div id="to_where_list"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
 
 
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <label for="departure">DEPARTURE DATE:</label><br/>
-                                    <input type="date" id="from_time" class="form-control date"
-                                           placeholder="Select date..."/>
-                                </fieldset>
-                            </div>
-
-
-                        </td>
-                        <td>
-                            <label for="return">RETURN DATE:</label><br/>
-                            <input type="date" id="to_time" class="form-control date"
-                                   placeholder="Select date..."/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="col-md-6">
-                            <button id="search" class="btn">
-                                Search
-                            </button>
-                        </td>
-                    </tr>
+                <div class="col-md-6">
+                    <fieldset>
+                        <label for="departure">DEPARTURE DATE:</label><br/>
+                        <input type="date" id="from_time" class="form-control date"
+                               placeholder="Select date..."/>
+                    </fieldset>
                 </div>
-            </div>
-        </section>
-    </div>
-</table>
+
+
+            </td>
+            <td>
+                <label for="return">RETURN DATE:</label><br/>
+                <input type="date" id="to_time" class="form-control date"
+                       placeholder="Select date..."/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="col-md-6">
+                <fieldset>
+                    <button id="search" class="btn">
+                        Search
+                    </button>
+                </fieldset>
+            </td>
+        </tr>
+
+    </table>
+</section>
+
+
+
+
 
 
 <div id="go_traval_list">
@@ -99,32 +92,6 @@
 <div id="back_traval_list">
     Back<br/>
 </div>
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="primary-button">
-                    <a href="#" class="scroll-top">Back To Top</a>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <ul class="social-icons">
-                    <li><a href="https://www.facebook.com/tooplate"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                </ul>
-            </div>
-            <div class="col-md-12">
-                <p>Copyright &copy; 2022 IVE Airline Company
-
-                    | Design: <a href="http://www.code-projects.org" target="_parent"><em>Code Projects</em></a></p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 </body>
 </html>
