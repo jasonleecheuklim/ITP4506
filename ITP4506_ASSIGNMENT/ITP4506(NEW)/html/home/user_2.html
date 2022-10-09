@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="../../css/customer.css">
 
 
-<!--    <style>-->
-<!--        #list, #from_where_list, #to_where_list {-->
-<!--            overflow-y: scroll;-->
-<!--            max-height: 100px;-->
-<!--        }-->
-<!--    </style>-->
+    <!--    <style>-->
+    <!--        #list, #from_where_list, #to_where_list {-->
+    <!--            overflow-y: scroll;-->
+    <!--            max-height: 100px;-->
+    <!--        }-->
+    <!--    </style>-->
 
 </head>
 <body>
@@ -42,16 +42,16 @@
 
             <div class="row">
                 <div class="col col-1 form-field">
-                    <label for="input-from">From:</label>
-                    <select id="input-from">
+                    <label for="from_where">From:</label>
+                    <select id="from_where">
                         <option value="" disabled selected>Select your option</option>
                         <option>HKG</option>
                         <option>2</option>
                     </select>
                 </div>
                 <div class="col col-1 form-field">
-                    <label for="input-to">To:</label>
-                    <select id="input-to">
+                    <label for="to_where">To:</label>
+                    <select id="to_where">
                         <option value="" disabled selected>Select your option</option>
                         <option>TYO</option>
                         <option>2</option>
@@ -60,18 +60,18 @@
             </div>
             <div class="row">
                 <div class="col col-1 form-field">
-                    <label for="input-departure">departure date</label>
-                    <input id="input-departure" type="date"/>
+                    <label for="from_time">departure date</label>
+                    <input id="from_time" type="date"/>
                 </div>
                 <div class="col col-1 form-field">
-                    <label for="input-return">return date</label>
-                    <input id="input-return" type="date"/>
+                    <label for="to_time">return date</label>
+                    <input id="to_time" type="date"/>
                 </div>
             </div>
             <div class="row">
                 <div class="col col-1 form-field">
                     <div class="button_container">
-                        <button id="search" type="button" class="button"onclick="toggleResults()">
+                        <button id="search" type="button" class="button" onclick="toggleResults()">
                             search
                         </button>
                     </div>
@@ -83,16 +83,49 @@
     <form id="results" class="form results" style="display: none">
         <div class="form-title">Results</div>
         <div class="form-content" id="test1">
-            dyrfjrf
 
-
-            <div id="go_traval_list">
-                Go<br/>
-            </div>
-
-            <div id="back_traval_list">
-                Back<br/>
-            </div>
+            <table border="1">
+                <tr>
+                    <td>
+                        Go
+                    </td>
+                    <td>
+                        Back
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="go_traval_list">
+                        </div>
+                    </td>
+                    <td>
+                        <div id="back_traval_list">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <button id="previous_go_page">
+                                <-
+                            </button>
+                            <button id="next_go_page">
+                                ->
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <button id="previous_back_page">
+                                <-
+                            </button>
+                            <button id="next_back_page">
+                                ->
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
         </div>
     </form>
@@ -103,10 +136,8 @@
         let div = document.getElementById('results');
         if (div.style.display === 'none') {
             div.style.display = '';
-
-            document.getElementById('test1').innerHTML = document.getElementById("go_traval_list");
-        } else {
-            div.style.display = 'none';
+        // } else {
+        //     div.style.display = 'none';
         }
     }
 </script>

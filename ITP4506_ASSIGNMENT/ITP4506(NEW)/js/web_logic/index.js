@@ -7,8 +7,8 @@ $(document).ready(function () {
     ]
 
     $("#login_form").submit(function () {
-        var username = $("#user_name").val()
-        var pass = $("#user_pass").val()
+        var username = $("#user_name").val();
+        var pass = $("#user_pass").val();
 
         // 用户名错误
         var str = "User name does not exist!"
@@ -17,13 +17,13 @@ $(document).ready(function () {
             if (value.user == username) {
 
                 if (value.pass == pass) { // 登录成功
-                    succ = value.type
-                    str = "Welcome! " + succ
-                    return false
+                    succ = value.type;
+                    str = "Welcome! " + succ;
+                    return false;
 
                 } else {  // 密码错误
-                    str = "Wrong password!"
-                    return false
+                    str = "Wrong password!";
+                    return false;
                 }
             }
         });
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         // 页面跳转
         if (succ) {
-            $("#login_form").attr("action", "home/" + succ + ".html")
+            $("#login_form").attr("action", "home/" + succ + ".html");
         }
     })
 })

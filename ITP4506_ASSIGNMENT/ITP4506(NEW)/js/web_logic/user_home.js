@@ -10,7 +10,7 @@ $(document).ready(function () {
     var json = []
 
     // 我受不了了，随机创建列表
-    var city = ["HKG",'TYO','TPE','SEL','UK']
+    var city = ["HKG", 'TYO', 'TPE', 'SEL', 'UK']
     var how_many = 30
 
     for (let i = 0; i < how_many; i++) {
@@ -28,17 +28,17 @@ $(document).ready(function () {
         date.setDate(rand)
 
         var date_str = date.getFullYear() + "-"
-                + (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-"
-                + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate())
+            + (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-"
+            + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate())
 
         var price = Math.floor(Math.random() * (50000 - 10000) + 10000)
         var hr = Math.floor(Math.random() * (9 - 2) + 2)
 
-        var id = i < 100?
-                    i < 10?
-                        "00" + i
-                        :"0" + i
-                    : "" + i
+        var id = i < 100 ?
+            i < 10 ?
+                "00" + i
+                : "0" + i
+            : "" + i
 
         var js = {
             from: from,
@@ -48,7 +48,7 @@ $(document).ready(function () {
             price: price,
             hr: hr
         }
-        
+
         json.push(js)
     }
 
@@ -64,6 +64,7 @@ $(document).ready(function () {
             list += str2
     });
 
+    // Button hide when One-way is checked
     $("input[name='travel']").click(function () {
         var travel = $("input[name='travel']:checked").val()
 
@@ -110,7 +111,7 @@ $(document).ready(function () {
     })
 
     // 航班列表刷新
-    function refresh_list(page_now, list_change, isGo, pre_page, next_page){
+    function refresh_list(page_now, list_change, isGo, pre_page, next_page) {
         list_change.children("p").remove()
 
         // display number
@@ -125,30 +126,30 @@ $(document).ready(function () {
              */
             var ty = 1
 
-            if(isGo){
-                if(
+            if (isGo) {
+                if (
                     (!$("#from_where").val() || $("#from_where").val() == value.from)
                     && (!$("#to_where").val() || $("#to_where").val() == value.to)
                     && (!$("#from_time").val() || $("#from_time").val() == value.date)
                 )
-                ty = 0
+                    ty = 0
 
-            }else{
+            } else {
                 // depar date
                 var date_now = new Date($("#from_time").val())
                 // value date
                 var date_choose = new Date(value.date)
 
-                if(
+                if (
                     (!$("#from_where").val() || $("#from_where").val() == value.to)
                     && (!$("#to_where").val() || $("#to_where").val() == value.from)
                     && (!$("#to_time").val() || $("#to_time").val() == value.date)
                     && (!$("#from_time").val() || date_choose >= date_now)
                 )
-                ty = 2
+                    ty = 2
             }
 
-             str = "<p>"
+            str = "<p>"
                 + "\tid: " + value.id
                 + "\tFrom: " + value.from
                 + "\tTo: " + value.to
@@ -157,26 +158,27 @@ $(document).ready(function () {
                 + "\thr: " + value.hr
                 + "</p>"
 
-            if(ty == 0 || ty == 2){
-                if(y <= one_page_num)
+            if (ty == 0 || ty == 2) {
+                if (y <= one_page_num)
                     list_change.append(str)
                 y++
             }
         }
 
         // 页面控制
-        if(page_now == 0)
+        if (page_now == 0)
             pre_page.hide()
         else
             pre_page.show()
-    
-        if(y < one_page_num)
+
+        if (y < one_page_num)
             next_page.hide()
         else
             next_page.show()
     }
 
-    function refresh_Go_list(){
+    //
+    function refresh_Go_list() {
         var list = $("#go_traval_list")
         var pre_page = $("#previous_go_page")
         var next_page = $("#next_go_page")
@@ -184,12 +186,12 @@ $(document).ready(function () {
         refresh_list(page_now_go, list, true, pre_page, next_page)
     }
 
-    function refresh_Back_list(){
+    function refresh_Back_list() {
         var list = $("#back_traval_list")
         var pre_page = $("#previous_back_page")
         var next_page = $("#next_back_page")
 
-        if($("input[name='travel']:checked").val() == "one_way")
+        if ($("input[name='travel']:checked").val() == "one_way")
             list.children("p").remove()
         else
             refresh_list(page_now_back, list, false, pre_page, next_page)
@@ -198,27 +200,27 @@ $(document).ready(function () {
     // 开局初始化
     refresh_Go_list()
 
-    $("#search").click(function(){
+    $("#search").click(function () {
         page_now_back = 0
         page_now_go = 0
         refresh_Go_list()
         refresh_Back_list()
     })
 
-    $("#previous_go_page").click(function() {
+    $("#previous_go_page").click(function () {
         page_now_go--
         refresh_Go_list()
     })
-    $("#next_go_page").click(function(){
+    $("#next_go_page").click(function () {
         page_now_go++
         refresh_Go_list()
     })
 
-    $("#previous_back_page").click(function() {
+    $("#previous_back_page").click(function () {
         page_now_back--
         refresh_Back_list()
     })
-    $("#next_back_page").click(function() {
+    $("#next_back_page").click(function () {
         page_now_back++
         refresh_Back_list()
     })
