@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46675ef3-df41-41ca-98a1-1d1b8c991f56" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ITP4506(NEW)/js/vendor/jquery-1.11.2.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/index.html" afterDir="false" />
     </list>
-    <list id="188556e0-7b15-467f-a2e4-876593c89cd8" name="Changes by lkho" comment="">
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" afterDir="false" />
-    </list>
+    <list id="188556e0-7b15-467f-a2e4-876593c89cd8" name="Changes by lkho" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,23 +20,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html">
-      <ranges>
-        <range start1="5" end1="6" start2="5" end2="6" changelist="46675ef3-df41-41ca-98a1-1d1b8c991f56" />
-        <range start1="11" end1="12" start2="11" end2="66" changelist="46675ef3-df41-41ca-98a1-1d1b8c991f56" />
-        <range start1="13" end1="13" start2="67" end2="75" changelist="188556e0-7b15-467f-a2e4-876593c89cd8" />
-        <range start1="14" end1="14" start2="76" end2="88" changelist="188556e0-7b15-467f-a2e4-876593c89cd8" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,7 +76,7 @@
       <workItem from="1665222400693" duration="34000" />
       <workItem from="1665222443640" duration="634000" />
       <workItem from="1665248192605" duration="2412000" />
-      <workItem from="1665288411707" duration="17080000" />
+      <workItem from="1665288411707" duration="20619000" />
     </task>
     <servers />
   </component>

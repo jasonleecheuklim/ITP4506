@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
+    <title>Document</title>
 
     <script type="text/javascript" src="../../js/vendor/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../../js/web_logic/user_home.js"></script>
@@ -15,75 +15,51 @@
             max-height: 100px;
         }
     </style>
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/customer.css">
-
 </head>
 <body>
-<section class="banner">
-    <table border="1">
-        <div>
-            <th colspan="2">
-                Booking
-            </th>
-        </div>
-        <tr>
-            <td colspan="2">
-                <input type="radio" name="travel" value="one_way"/>ONEWAY
-                <input type="radio" name="travel" value="to_fro" checked/>ROUND
-            </td>
-        </tr>
-        <tr>
-            <td>
-                FROM: <br/>
-                <input type="text" id="from_where"/>
-                <div id="from_where_list"></div>
-            </td>
-            <td>
-                TO: <br/>
-                <input type="text" id="to_where"/>
-                <div id="to_where_list"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-
-
-                <div class="col-md-6">
-                    <fieldset>
-                        <label for="departure">DEPARTURE DATE:</label><br/>
-                        <input type="date" id="from_time" class="form-control date"
-                               placeholder="Select date..."/>
-                    </fieldset>
-                </div>
-
-
-            </td>
-            <td>
-                <label for="return">RETURN DATE:</label><br/>
-                <input type="date" id="to_time" class="form-control date"
-                       placeholder="Select date..."/>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" class="col-md-6">
-                <fieldset>
-                    <button id="search" class="btn">
-                        Search
-                    </button>
-                </fieldset>
-            </td>
-        </tr>
-
-    </table>
-</section>
-
-
-
-
-
+user page
+<table border="1">
+    <tr>
+        <th colspan="2">
+            booking
+        </th>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="radio" name="travel" value="one_way" />One Way
+            <input type="radio" name="travel" value="to_fro" checked />to and fro
+        </td>
+    </tr>
+    <tr>
+        <td>
+            From <br/>
+            <input type="text" id="from_where" />
+            <div id="from_where_list"></div>
+        </td>
+        <td>
+            To <br/>
+            <input type="text" id="to_where" />
+            <div id="to_where_list"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Departure date <br/>
+            <input type="date" id="from_time" />
+        </td>
+        <td>
+            Return date <br/>
+            <input type="date" id="to_time" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button id="search">
+                Search
+            </button>
+        </td>
+    </tr>
+</table>
 
 <div id="go_traval_list">
     Go<br/>
@@ -92,6 +68,5 @@
 <div id="back_traval_list">
     Back<br/>
 </div>
-
 </body>
 </html>

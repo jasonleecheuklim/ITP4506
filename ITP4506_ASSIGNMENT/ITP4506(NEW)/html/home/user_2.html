@@ -2,8 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>USER</title>
+
+    <script type="text/javascript" src="../../js/vendor/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/web_logic/user_home.js"></script>
+
     <link rel="stylesheet" href="../../css/customer.css">
+
+
+<!--    <style>-->
+<!--        #list, #from_where_list, #to_where_list {-->
+<!--            overflow-y: scroll;-->
+<!--            max-height: 100px;-->
+<!--        }-->
+<!--    </style>-->
+
 </head>
 <body>
 <div class="container">
@@ -21,7 +34,7 @@
                 </div>
                 <div class="col col-1 form-field">
                     <label>
-                        <input type="radio" name="travel" value="round"/>
+                        <input type="radio" name="travel" value="round" checked/>
                         round
                     </label>
                 </div>
@@ -32,14 +45,15 @@
                     <label for="input-from">From:</label>
                     <select id="input-from">
                         <option value="" disabled selected>Select your option</option>
-                        <option>1</option>
+                        <option>HKG</option>
                         <option>2</option>
                     </select>
                 </div>
                 <div class="col col-1 form-field">
                     <label for="input-to">To:</label>
                     <select id="input-to">
-                        <option>1</option>
+                        <option value="" disabled selected>Select your option</option>
+                        <option>TYO</option>
                         <option>2</option>
                     </select>
                 </div>
@@ -71,9 +85,19 @@
         <div class="form-content" id="test1">
             dyrfjrf
 
+
+            <div id="go_traval_list">
+                Go<br/>
+            </div>
+
+            <div id="back_traval_list">
+                Back<br/>
+            </div>
+
         </div>
     </form>
 </div>
+
 <script>
     function toggleResults() {
         let div = document.getElementById('results');
@@ -86,5 +110,6 @@
         }
     }
 </script>
+
 </body>
 </html>
