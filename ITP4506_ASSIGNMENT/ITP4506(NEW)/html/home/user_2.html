@@ -3,14 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="user_2.css"/>
+    <link rel="stylesheet" href="../../css/customer.css">
 </head>
 <body>
 <div class="container">
     <h1 class="title">Book your flight now</h1>
     <form class="form">
-        <div>Reservation</div>
+        <div class="form-title">Reservation</div>
+        <div class="form-content">
+
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <label>
+                        <input type="radio" name="travel" value="one_way"/>
+                        oneway
+                    </label>
+                </div>
+                <div class="col col-1 form-field">
+                    <label>
+                        <input type="radio" name="travel" value="round"/>
+                        round
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <label for="input-from">From:</label>
+                    <select id="input-from">
+                        <option value="" disabled selected>Select your option</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <div class="col col-1 form-field">
+                    <label for="input-to">To:</label>
+                    <select id="input-to">
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <label for="input-departure">departure date</label>
+                    <input id="input-departure" type="date"/>
+                </div>
+                <div class="col col-1 form-field">
+                    <label for="input-return">return date</label>
+                    <input id="input-return" type="date"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <div class="button_container">
+                        <button id="search" type="button" class="button"onclick="toggleResults()">
+                            search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form id="results" class="form results" style="display: none">
+        <div class="form-title">Results</div>
+        <div class="form-content" id="test1">
+            dyrfjrf
+
+        </div>
     </form>
 </div>
+<script>
+    function toggleResults() {
+        let div = document.getElementById('results');
+        if (div.style.display === 'none') {
+            div.style.display = '';
+
+            document.getElementById('test1').innerHTML = document.getElementById("go_traval_list");
+        } else {
+            div.style.display = 'none';
+        }
+    }
+</script>
 </body>
 </html>
