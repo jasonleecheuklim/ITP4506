@@ -159,7 +159,7 @@ $(document).ready(function () {
                 + "</p>"
 
             if (ty == 0 || ty == 2) {
-                if (y <= one_page_num)
+                if (y < one_page_num)
                     list_change.append(str)
                 y++
             }
