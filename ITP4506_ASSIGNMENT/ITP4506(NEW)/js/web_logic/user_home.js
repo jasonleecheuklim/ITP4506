@@ -1,20 +1,59 @@
 $(document).ready(function () {
 
-    // 添加只需要修改这个json
-    var json = [
-        {from: "HKG", to: "TYO", date: '2022-10-10', id: '001', price: '10000', hr: '2'},
-        {from: 'TYO', to: 'HKG', date: '2022-10-14', id: '002', price: '10000', hr: '2'},
-        {from: 'TPE', to: 'HKG', date: '2022-10-12', id: '003', price: '10000', hr: '8'},
-        {from: 'HKG', to: 'TPE', date: '2022-10-13', id: '004', price: '10000', hr: '8'},
-        {from: 'TYO', to: 'TPE', date: '2022-10-13', id: '005', price: '10000', hr: '3'},
-        {from: 'TPE', to: 'TYO', date: '2022-11-01', id: '006', price: '10000', hr: '3'},
-        {from: 'SEL', to: 'HKG', date: '2022-10-10', id: '007', price: '10000', hr: '4'},
-        {from: 'HKG', to: 'SEL', date: '2022-10-11', id: '008', price: '10000', hr: '4'},
-        {from: 'SEL', to: 'TYO', date: '2022-10-10', id: '009', price: '10000', hr: '5'},
-        {from: 'TYO', to: 'SEL', date: '2022-11-01', id: '010', price: '10000', hr: '5'}
-    ]
+    // 目前页数
+    var page_now_go = 0
+    var page_now_back = 0
+    // 每页显示数量
+    var one_page_num = 12
 
-    // 创建列表
+    // 航班列表
+    var json = []
+
+    // 我受不了了，随机创建列表
+    var city = ["HKG",'TYO','TPE','SEL','UK']
+    var how_many = 30
+
+    for (let i = 0; i < how_many; i++) {
+        var rand = Math.floor(Math.random() * city.length)
+        var rand2 = Math.floor(Math.random() * city.length)
+        while (rand == rand2) {
+            rand2 = Math.floor(Math.random() * city.length)
+        }
+
+        var from = city[rand]
+        var to = city[rand2]
+
+        var date = new Date()
+        rand = date.getDate() + Math.floor(Math.random() * 360)
+        date.setDate(rand)
+
+        var date_str = date.getFullYear() + "-"
+                + (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-"
+                + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate())
+
+        var price = Math.floor(Math.random() * (50000 - 10000) + 10000)
+        var hr = Math.floor(Math.random() * (9 - 2) + 2)
+
+        var id = i < 100?
+                    i < 10?
+                        "00" + i
+                        :"0" + i
+                    : "" + i
+
+        var js = {
+            from: from,
+            to: to,
+            date: date_str,
+            id: id,
+            price: price,
+            hr: hr
+        }
+        
+        json.push(js)
+    }
+
+
+    // 创建预览列表
     var list = ""
     json.forEach(value => {
         var str = "<p>" + value.from + "</p>"
@@ -64,50 +103,52 @@ $(document).ready(function () {
         if (date_now > date_choose) {
             alert("Wrong date! Please select a date today or later.")
             var date_str = date_now.getFullYear() + "-"
-                + (date_now.getMonth() + 1 < 10 ? "0" + date_now.getMonth() + 1 : date_now.getMonth() + 1) + "-"
+                + (date_now.getMonth() + 1 < 10 ? "0" + (date_now.getMonth() + 1) : date_now.getMonth() + 1) + "-"
                 + (date_now.getDate() < 10 ? "0" + date_now.getDate() : date_now.getDate())
             $(this).val(date_str)
         }
     })
 
     // 航班列表刷新
-    function refresh_list() {
-        var go_list = $("#go_traval_list")
-        var back_list = $("#back_traval_list")
+    function refresh_list(page_now, list_change, isGo, pre_page, next_page){
+        list_change.children("p").remove()
 
-        go_list.children("p").remove()
-        back_list.children("p").remove()
+        // display number
+        var y = 0
+        for (var i = page_now * one_page_num; i < json.length && y < one_page_num + 1; i++) {
+            var value = json[i]
 
-        json.forEach(value => {
             /**
              * 0 = Go
              * 1 = pass
              * 2 = back
              */
-            var ty = 0
+            var ty = 1
 
-            if (
-                ($("#from_where").val() && $("#from_where").val() != value.from)
-                || ($("#to_where").val() && $("#to_where").val() != value.to)
-                || ($("#from_time").val() && $("#from_time").val() != value.date)
-            )
-                ty = 1
-
-            var date_now = new Date($("#from_time").val())
-            var date_choose = new Date(value.date)
-
-            if (
-                (ty == 1 && $("input[name='travel']:checked").val() != "one_way")
-                && !(
-                    ($("#from_where").val() && $("#from_where").val() != value.to)
-                    || ($("#to_where").val() && $("#to_where").val() != value.from)
-                    || ($("#to_time").val() && $("#to_time").val() != value.date)
-                    || (date_choose < date_now)
+            if(isGo){
+                if(
+                    (!$("#from_where").val() || $("#from_where").val() == value.from)
+                    && (!$("#to_where").val() || $("#to_where").val() == value.to)
+                    && (!$("#from_time").val() || $("#from_time").val() == value.date)
                 )
-            )
-                ty = 2
+                ty = 0
 
-            str = "<p>"
+            }else{
+                // depar date
+                var date_now = new Date($("#from_time").val())
+                // value date
+                var date_choose = new Date(value.date)
+
+                if(
+                    (!$("#from_where").val() || $("#from_where").val() == value.to)
+                    && (!$("#to_where").val() || $("#to_where").val() == value.from)
+                    && (!$("#to_time").val() || $("#to_time").val() == value.date)
+                    && (!$("#from_time").val() || date_choose >= date_now)
+                )
+                ty = 2
+            }
+
+             str = "<p>"
                 + "\tid: " + value.id
                 + "\tFrom: " + value.from
                 + "\tTo: " + value.to
@@ -116,17 +157,69 @@ $(document).ready(function () {
                 + "\thr: " + value.hr
                 + "</p>"
 
-            switch (ty) {
-                case 0:
-                    go_list.append(str)
-                    break;
-
-                case 2:
-                    back_list.append(str)
-                    break;
+            if(ty == 0 || ty == 2){
+                if(y <= one_page_num)
+                    list_change.append(str)
+                y++
             }
-        });
+        }
+
+        // 页面控制
+        if(page_now == 0)
+            pre_page.hide()
+        else
+            pre_page.show()
+    
+        if(y < one_page_num)
+            next_page.hide()
+        else
+            next_page.show()
     }
 
-    $("#search").click(refresh_list)
+    function refresh_Go_list(){
+        var list = $("#go_traval_list")
+        var pre_page = $("#previous_go_page")
+        var next_page = $("#next_go_page")
+
+        refresh_list(page_now_go, list, true, pre_page, next_page)
+    }
+
+    function refresh_Back_list(){
+        var list = $("#back_traval_list")
+        var pre_page = $("#previous_back_page")
+        var next_page = $("#next_back_page")
+
+        if($("input[name='travel']:checked").val() == "one_way")
+            list.children("p").remove()
+        else
+            refresh_list(page_now_back, list, false, pre_page, next_page)
+    }
+
+    // 开局初始化
+    refresh_Go_list()
+
+    $("#search").click(function(){
+        page_now_back = 0
+        page_now_go = 0
+        refresh_Go_list()
+        refresh_Back_list()
+    })
+
+    $("#previous_go_page").click(function() {
+        page_now_go--
+        refresh_Go_list()
+    })
+    $("#next_go_page").click(function(){
+        page_now_go++
+        refresh_Go_list()
+    })
+
+    $("#previous_back_page").click(function() {
+        page_now_back--
+        refresh_Back_list()
+    })
+    $("#next_back_page").click(function() {
+        page_now_back++
+        refresh_Back_list()
+    })
 })
