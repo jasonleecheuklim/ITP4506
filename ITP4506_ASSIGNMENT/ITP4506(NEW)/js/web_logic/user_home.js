@@ -10,7 +10,7 @@ $(document).ready(function () {
     var json = []
 
     // 我受不了了，随机创建列表
-    var city = ["HKG", 'TYO', 'TPE', 'SEL', 'UK']
+    var city = ["HKG", 'TYO', 'TPE', 'SEL', 'LHR']
     var how_many = 30
 
     for (let i = 0; i < how_many; i++) {

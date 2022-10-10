@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="46675ef3-df41-41ca-98a1-1d1b8c991f56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_home.js" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_home.js" afterDir="false" />
     </list>
     <list id="188556e0-7b15-467f-a2e4-876593c89cd8" name="Changes by lkho" comment="" />
@@ -77,6 +76,8 @@
       <workItem from="1665222443640" duration="634000" />
       <workItem from="1665248192605" duration="2412000" />
       <workItem from="1665288411707" duration="26498000" />
+      <workItem from="1665393444844" duration="716000" />
+      <workItem from="1665417204539" duration="4756000" />
     </task>
     <servers />
   </component>
