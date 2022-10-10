@@ -52,6 +52,11 @@ $(document).ready(function () {
         json.push(js)
     }
 
+    // 更新前端select
+    city.forEach(element => {
+        $("#from_where").append("<option>" + element + "</option>")
+        $("#to_where").append("<option>" + element + "</option>")
+    });
 
     // 创建预览列表
     var list = ""
@@ -63,6 +68,8 @@ $(document).ready(function () {
         if (list.indexOf(str2) == -1)
             list += str2
     });
+
+    // 监听器群
 
     // Button hide when One-way is checked
     $("input[name='travel']").click(function () {
@@ -78,25 +85,23 @@ $(document).ready(function () {
         }
     })
 
-    var editing = ""
-    $("input[type='text']")
-        .click(function () {
-            editing = $(this).attr("id") + "_list"
-
-            $("#" + editing).html(list)
-            $("#" + editing + " p").hide()
-            $("#" + editing + " p:contains('" + $(this).val() + "')").show()
+    function select_change(select, change){
+        change.children().show()
+        change.children("option:contains('" + select.val() + "')").map(function(){
+            if($(this).text() == select.val())
+                $(this).hide()
         })
-        .keyup(function () {
-            $("#" + editing + " p").hide()
-            $("#" + editing + " p:contains('" + $(this).val() + "')").show()
+    }
 
-        })
-        .blur(function () {
-            $("#" + editing + " p").remove()
-            editing = ""
-        })
+    // select 防原地起飞
+    $("#from_where").change(function(){
+        select_change($(this), $("#to_where"))
+    })
+    $("#to_where").change(function(){
+        select_change($(this), $("#from_where"))
+    })
 
+    // date 防时光倒流
     $("input[type='date']").change(function () {
         // alert($(this).val())
         var date_now = new Date()
@@ -177,7 +182,6 @@ $(document).ready(function () {
             next_page.show()
     }
 
-    //
     function refresh_Go_list() {
         var list = $("#go_traval_list")
         var pre_page = $("#previous_go_page")
