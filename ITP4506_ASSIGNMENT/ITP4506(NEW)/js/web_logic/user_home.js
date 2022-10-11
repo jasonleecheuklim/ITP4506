@@ -117,7 +117,7 @@ $(document).ready(function () {
 
     // 航班列表刷新
     function refresh_list(page_now, list_change, isGo, pre_page, next_page) {
-        list_change.children("p").remove()
+        list_change.children("tr").remove()
 
         // display number
         var y = 0
@@ -154,14 +154,23 @@ $(document).ready(function () {
                     ty = 2
             }
 
-            str = "<p>"
-                + "\tid: " + value.id
-                + "\tFrom: " + value.from
-                + "\tTo: " + value.to
-                + "\tdate: " + value.date
-                + "\tprice: " + value.price
-                + "\thr: " + value.hr
-                + "</p>"
+            // str = "<p>"
+            //     + "\tid: " + value.id
+            //     + "\tFrom: " + value.from
+            //     + "\tTo: " + value.to
+            //     + "\tdate: " + value.date
+            //     + "\tprice: " + value.price
+            //     + "\thr: " + value.hr
+            //     + "</p>"
+
+            str = "<tr>"
+                    + "<td>" + value.id + "</td>"
+                    + "<td>" + value.from + "</td>"
+                    + "<td>" + value.to + "</td>"
+                    + "<td>" + value.date + "</td>"
+                    + "<td>" + value.price + "</td>"
+                    + "<td>" + value.hr + "</td>"
+                    + "</tr>"
 
             if (ty == 0 || ty == 2) {
                 if (y < one_page_num)
@@ -183,7 +192,7 @@ $(document).ready(function () {
     }
 
     function refresh_Go_list() {
-        var list = $("#go_traval_list")
+        var list = $("#go_data")
         var pre_page = $("#previous_go_page")
         var next_page = $("#next_go_page")
 
@@ -208,7 +217,7 @@ $(document).ready(function () {
         page_now_back = 0
         page_now_go = 0
         refresh_Go_list()
-        refresh_Back_list()
+        // refresh_Back_list()
     })
 
     $("#previous_go_page").click(function () {
