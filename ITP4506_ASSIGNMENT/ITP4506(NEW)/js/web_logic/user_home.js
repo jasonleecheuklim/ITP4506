@@ -168,8 +168,8 @@ $(document).ready(function () {
                     + "<td>" + value.from + "</td>"
                     + "<td>" + value.to + "</td>"
                     + "<td>" + value.date + "</td>"
-                    + "<td>" + value.price + "</td>"
-                    + "<td>" + value.hr + "</td>"
+                    + "<td>$ " + value.price + "</td>"
+                    + "<td>" + value.hr + " h</td>"
                     + "</tr>"
 
             if (ty == 0 || ty == 2) {
