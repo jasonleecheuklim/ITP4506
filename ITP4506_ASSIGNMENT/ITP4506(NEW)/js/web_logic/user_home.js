@@ -217,7 +217,7 @@ $(document).ready(function () {
         page_now_back = 0
         page_now_go = 0
         refresh_Go_list()
-        // refresh_Back_list()
+        refresh_Back_list()
     })
 
     $("#previous_go_page").click(function () {
