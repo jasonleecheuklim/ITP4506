@@ -82,126 +82,82 @@
 
     <div id="results" class="form results" style="display: none">
         <div class="form-title">Results</div>
-        <!--        <div class="form-content" id="test1">-->
-
-        <!--            <table border="1">-->
-        <!--                <tr>-->
-        <!--                    <td>-->
-        <!--                        Departure-->
-        <!--                    </td>-->
-        <!--                    <td>-->
-        <!--                        Return-->
-        <!--                    </td>-->
-        <!--                </tr>-->
-        <!--                <tr>-->
-        <!--                    <td>-->
-        <!--                        <div id="go_data_1">-->
-        <!--                        </div>-->
-        <!--                    </td>-->
-        <!--                    <td>-->
-        <!--                        <div id="back_travel_list_1">-->
-        <!--                        </div>-->
-        <!--                    </td>-->
-        <!--                </tr>-->
-        <!--                <tr>-->
-        <!--                    <td>-->
-        <!--                        <div>-->
-        <!--                            <button id="previous_go_page">-->
-        <!--                                <- -->
-        <!--                            </button>-->
-        <!--                            <button id="next_go_page">-->
-        <!--                                ->-->
-        <!--                            </button>-->
-        <!--                        </div>-->
-        <!--                    </td>-->
-        <!--                    <td>-->
-        <!--                        <div>-->
-        <!--                            <button id="previous_back_page">-->
-        <!--                                <- -->
-        <!--                            </button>-->
-        <!--                            <button id="next_back_page">-->
-        <!--                                ->-->
-        <!--                            </button>-->
-        <!--                        </div>-->
-        <!--                    </td>-->
-        <!--                </tr>-->
-        <!--            </table>-->
-        <!--        </div>-->
+        <div class="form-content" id="test1">
 
 
-        <div id="resultresult" class="table-wrapper" style="display:none">
-            <h2>Departure</h2>
-            <table class="fl-table">
-                <thead>
-                <tr>
-                    <th>id</th>
-                    <th>from</th>
-                    <th>to</th>
-                    <th>date</th>
-                    <th>price</th>
-                    <th>hour</th>
-                </tr>
-                </thead>
-                <tbody id="go_data">
+            <div id="result" class="table-wrapper">
+                <h2>Departure</h2>
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>from</th>
+                        <th>to</th>
+                        <th>date</th>
+                        <th>price</th>
+                        <th>hour</th>
+                    </tr>
+                    </thead>
+                    <tbody id="go_data">
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-            <div class="row">
-                <div class="col col-1 form-field">
-                    <div class="button_container">
-                        <button id="previous_go_page" type="button" class="button">
-                            <-
-                        </button>
+                <div class="row">
+                    <div class="col col-1 form-field">
+                        <div class="button_container">
+                            <button id="previous_go_page" type="button" class="button">
+                                <-
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col col-1 form-field">
+                        <div class="button_container">
+                            <button id="next_go_page" type="button" class="button">
+                                ->
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="col col-1 form-field">
-                    <div class="button_container">
-                        <button id="next_go_page" type="button" class="button">
-                            ->
-                        </button>
+
+
+                <h2>Return</h2>
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <th><label>id</label></th>
+                        <th><label>from</label></th>
+                        <th><label>to</label></th>
+                        <th><label>date</label></th>
+                        <th><label>price</label></th>
+                        <th><label>hour</label></th>
+                    </tr>
+                    </thead>
+                    <tbody id="back_travel_list">
+
+                    </tbody>
+                </table>
+
+                <div class="row">
+                    <div class="col col-1 form-field">
+                        <div class="button_container">
+                            <button id="previous_back_page" type="button" class="button">
+                                <-
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col col-1 form-field">
+                        <div class="button_container">
+                            <button id="next_back_page" type="button" class="button">
+                                ->
+                            </button>
+                        </div>
                     </div>
                 </div>
+
             </div>
-
-
-            <h2>Return</h2>
-            <table class="fl-table">
-                <thead>
-                <tr>
-                    <th><label>id</label></th>
-                    <th><label>from</label></th>
-                    <th><label>to</label></th>
-                    <th><label>date</label></th>
-                    <th><label>price</label></th>
-                    <th><label>hour</label></th>
-                </tr>
-                </thead>
-                <tbody id="back_travel_list">
-
-                </tbody>
-            </table>
-
-            <div class="row">
-                <div class="col col-1 form-field">
-                    <div class="button_container">
-                        <button id="previous_back_page" type="button" class="button">
-                            <-
-                        </button>
-                    </div>
-                </div>
-                <div class="col col-1 form-field">
-                    <div class="button_container">
-                        <button id="next_back_page" type="button" class="button">
-                            ->
-                        </button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
-
 </div>
 
 <script>
@@ -212,13 +168,6 @@
             // } else {
             //     div.style.display = 'none';
         }
-
-        let div2 = document.getElementById('resultresult');
-        if (div2.style.display === 'none') {
-            div2.style.display = '';
-        }
-
-
     }
 </script>
 
