@@ -200,7 +200,7 @@ $(document).ready(function () {
     }
 
     function refresh_Back_list() {
-        var list = $("#back_traval_list")
+        var list = $("#back_travel_list")
         var pre_page = $("#previous_back_page")
         var next_page = $("#next_back_page")
 

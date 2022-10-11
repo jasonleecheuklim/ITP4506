@@ -30,13 +30,13 @@
                 <div class="col col-1 form-field">
                     <label>
                         <input type="radio" name="travel" value="one_way"/>
-                        oneway
+                        oneway trip
                     </label>
                 </div>
                 <div class="col col-1 form-field">
                     <label>
                         <input type="radio" name="travel" value="round" checked/>
-                        round
+                        round trip
                     </label>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <label for="to_where">To:</label>
                     <select id="to_where">
                         <option value="" disabled selected>Select your option</option>
-                        
+
                     </select>
                 </div>
             </div>
@@ -82,73 +82,125 @@
 
     <div id="results" class="form results" style="display: none">
         <div class="form-title">Results</div>
-        <div class="form-content" id="test1">
+        <!--        <div class="form-content" id="test1">-->
 
-            <table border="1">
+        <!--            <table border="1">-->
+        <!--                <tr>-->
+        <!--                    <td>-->
+        <!--                        Departure-->
+        <!--                    </td>-->
+        <!--                    <td>-->
+        <!--                        Return-->
+        <!--                    </td>-->
+        <!--                </tr>-->
+        <!--                <tr>-->
+        <!--                    <td>-->
+        <!--                        <div id="go_data_1">-->
+        <!--                        </div>-->
+        <!--                    </td>-->
+        <!--                    <td>-->
+        <!--                        <div id="back_travel_list_1">-->
+        <!--                        </div>-->
+        <!--                    </td>-->
+        <!--                </tr>-->
+        <!--                <tr>-->
+        <!--                    <td>-->
+        <!--                        <div>-->
+        <!--                            <button id="previous_go_page">-->
+        <!--                                <- -->
+        <!--                            </button>-->
+        <!--                            <button id="next_go_page">-->
+        <!--                                ->-->
+        <!--                            </button>-->
+        <!--                        </div>-->
+        <!--                    </td>-->
+        <!--                    <td>-->
+        <!--                        <div>-->
+        <!--                            <button id="previous_back_page">-->
+        <!--                                <- -->
+        <!--                            </button>-->
+        <!--                            <button id="next_back_page">-->
+        <!--                                ->-->
+        <!--                            </button>-->
+        <!--                        </div>-->
+        <!--                    </td>-->
+        <!--                </tr>-->
+        <!--            </table>-->
+        <!--        </div>-->
+
+
+        <div id="resultresult" class="table-wrapper" style="display:none">
+            <h2>Departure</h2>
+            <table class="fl-table">
+                <thead>
                 <tr>
-                    <td>
-                        Go
-                    </td>
-                    <td>
-                        Back
-                    </td>
+                    <th>id</th>
+                    <th>from</th>
+                    <th>to</th>
+                    <th>date</th>
+                    <th>price</th>
+                    <th>hour</th>
                 </tr>
-                <tr>
-                    <td>
-                        <div id="go_traval_list">
-                        </div>
-                    </td>
-                    <td>
-                        <div id="back_traval_list">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <button id="previous_go_page">
-                                <-
-                            </button>
-                            <button id="next_go_page">
-                                ->
-                            </button>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <button id="previous_back_page">
-                                <-
-                            </button>
-                            <button id="next_back_page">
-                                ->
-                            </button>
-                        </div>
-                    </td>
-                </tr>
+                </thead>
+                <tbody id="go_data">
+
+                </tbody>
             </table>
+
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <div class="button_container">
+                        <button id="previous_go_page" type="button" class="button">
+                            <-
+                        </button>
+                    </div>
+                </div>
+                <div class="col col-1 form-field">
+                    <div class="button_container">
+                        <button id="next_go_page" type="button" class="button">
+                            ->
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>Return</h2>
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>from</th>
+                    <th>to</th>
+                    <th>date</th>
+                    <th>price</th>
+                    <th>hour</th>
+                </tr>
+                </thead>
+                <tbody id="back_travel_list">
+
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <div class="button_container">
+                        <button id="previous_back_page" type="button" class="button">
+                            <-
+                        </button>
+                    </div>
+                </div>
+                <div class="col col-1 form-field">
+                    <div class="button_container">
+                        <button id="next_back_page" type="button" class="button">
+                            ->
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-
-
-    <div id="resultresult" class="table-wrapper" style="display:none">
-        <h2>Result</h2>
-        <table class="fl-table">
-            <thead>
-            <tr>
-                <th>id</th>
-                <th>from</th>
-                <th>to</th>
-                <th>date</th>
-                <th>price</th>
-                <th>hour</th>
-            </tr>
-            </thead>
-            <tbody id="go_data">
-
-            <tbody>
-        </table>
-    </div>
-
 
 </div>
 
