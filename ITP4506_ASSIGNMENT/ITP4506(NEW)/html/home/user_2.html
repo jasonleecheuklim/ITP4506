@@ -19,6 +19,7 @@
 
 </head>
 <body>
+
 <div class="container">
     <h1 class="title">Book your flight now</h1>
 
@@ -71,17 +72,21 @@
                 <div class="col col-1 form-field">
                     <div class="button_container">
                         <button id="search" type="button" class="button" onclick="toggleResults()">
-                            search
+                            <label>search</label>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
+
+<div class="container2">
+    <h1 class="title" id="search_results" style="display: none">search results</h1>
 
     <div id="results" class="form results" style="display: none">
-        <div class="form-title">Results</div>
+
         <div class="form-content" id="test1">
 
 
@@ -90,12 +95,12 @@
                 <table class="fl-table">
                     <thead>
                     <tr>
-                        <th>id</th>
-                        <th>from</th>
-                        <th>to</th>
-                        <th>date</th>
-                        <th>price</th>
-                        <th>hour</th>
+                        <th><label>id</label></th>
+                        <th><label>from</label></th>
+                        <th><label>to</label></th>
+                        <th><label>date</label></th>
+                        <th><label>price</label></th>
+                        <th><label>hour</label></th>
                     </tr>
                     </thead>
                     <tbody id="go_data">
@@ -154,17 +159,24 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
+
 
 <script>
     function toggleResults() {
         let div = document.getElementById('results');
         if (div.style.display === 'none') {
             div.style.display = '';
+            // } else {
+            //     div.style.display = 'none';
+        }
+
+        let div2 = document.getElementById('search_results');
+        if (div2.style.display === 'none') {
+            div2.style.display = '';
             // } else {
             //     div.style.display = 'none';
         }

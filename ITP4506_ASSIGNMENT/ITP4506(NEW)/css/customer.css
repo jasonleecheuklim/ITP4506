@@ -81,6 +81,7 @@ body {
 
 .button_container {
     text-align: center;
+    margin: 20px;
 }
 
 .form select,
@@ -112,13 +113,10 @@ body {
 }
 
 .form.results {
-    margin-top: 20px;
+    margin-top: 50px;
     max-width: 1000px;
+    background-color: white;
 }
-
-
-
-
 
 
 * {
@@ -127,20 +125,24 @@ body {
     -moz-box-sizing: border-box;
 }
 
+body {
+    font-family: font-family: 'Trebuchet MS', sans-serif;;
+    -webkit-font-smoothing: antialiased;
+}
+
 h2 {
     text-align: center;
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: black;
-    padding: 30px 0;
+    padding: 5px 0;
 }
 
 /* Table Styles */
 
 .table-wrapper {
-    margin: 10px 70px 70px;
-    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+    margin: 0 20px 0px;
 }
 
 .fl-table {
@@ -152,7 +154,7 @@ h2 {
     width: 100%;
     max-width: 100%;
     white-space: nowrap;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .fl-table td, .fl-table th {
@@ -166,7 +168,7 @@ h2 {
 }
 
 .fl-table thead th {
-    color: whitesmoke;
+    color: #ffffff;
     background: #4FC3A1;
 }
 
@@ -178,6 +180,12 @@ h2 {
 
 .fl-table tr:nth-child(even) {
     background: #F8F8F8;
+}
+
+.container2 {
+    margin: auto;
+    max-width: 800px;
+    /*background: red; !* debug *!*/
 }
 
 /* Responsive */
@@ -193,7 +201,7 @@ h2 {
         display: block;
         text-align: right;
         font-size: 11px;
-        color: whitesmoke;
+        color: white;
         padding: 0 0 10px;
     }
 
@@ -257,4 +265,5 @@ h2 {
         display: block;
         text-align: center;
     }
+
 }
