@@ -179,6 +179,16 @@ $(document).ready(function () {
             }
         }
 
+        // 填充空行
+        if(y < 12){
+            str = "<tr>"
+                    + "<td colspan='6'>&nbsp;</td>"
+                    + "</tr>"
+            for (var i = 0; i < 12 - y; i++) {
+                list_change.append(str)
+            }
+        }
+
         // 页面控制
         if (page_now == 0)
             pre_page.hide()
@@ -205,9 +215,11 @@ $(document).ready(function () {
         var next_page = $("#next_back_page")
 
         if ($("input[name='travel']:checked").val() == "one_way")
-            list.children("p").remove()
-        else
+            $("#back_table").hide()
+        else{
+            $("#back_table").show()
             refresh_list(page_now_back, list, false, pre_page, next_page)
+        }
     }
 
     // 开局初始化
