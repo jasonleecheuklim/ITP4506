@@ -1,5 +1,21 @@
 $(document).ready(function () {
 
+    // 获取get
+    function get_get(){
+        value = window.location.href.split("?")
+        if(value[1]){
+            GETs = value[1].split("&")
+            GET = new Array()
+
+            GETs.forEach(element => {
+                k_v = element.split("=")
+                GET[k_v[0]] = k_v[1]
+            });
+        }
+    }
+
+    get_get()
+
     // 目前页数
     var page_now_go = 0
     var page_now_back = 0
@@ -7,49 +23,61 @@ $(document).ready(function () {
     var one_page_num = 12
 
     // 航班列表
-    var json = []
+    var json = Cookies.get('json_list') == undefined? []: JSON.parse(Cookies.get('json_list'))
 
     // 我受不了了，随机创建列表
     var city = ["HKG", 'TYO', 'TPE', 'SEL', 'LHR']
     var how_many = 30
 
-    for (let i = 0; i < how_many; i++) {
-        var rand = Math.floor(Math.random() * city.length)
-        var rand2 = Math.floor(Math.random() * city.length)
-        while (rand == rand2) {
-            rand2 = Math.floor(Math.random() * city.length)
+    function refresh_data(){
+        var json_list = []
+        for (let i = 0; i < how_many; i++) {
+            var rand = Math.floor(Math.random() * city.length)
+            var rand2 = Math.floor(Math.random() * city.length)
+            while (rand == rand2) {
+                rand2 = Math.floor(Math.random() * city.length)
+            }
+    
+            var from = city[rand]
+            var to = city[rand2]
+    
+            var date = new Date()
+            rand = date.getDate() + Math.floor(Math.random() * 360)
+            date.setDate(rand)
+    
+            var date_str = date.getFullYear() + "-"
+                + (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-"
+                + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate())
+    
+            var price = Math.floor(Math.random() * (50000 - 10000) + 10000)
+            var hr = Math.floor(Math.random() * (9 - 2) + 2)
+    
+            var id = i < 100 ?
+                i < 10 ?
+                    "00" + i
+                    : "0" + i
+                : "" + i
+
+            var js = {
+                from: from,
+                to: to,
+                date: date_str,
+                id: id,
+                price: price,
+                hr: hr
+            }
+
+            json_list.push(js)
+
         }
+        return json_list
 
-        var from = city[rand]
-        var to = city[rand2]
+    }
 
-        var date = new Date()
-        rand = date.getDate() + Math.floor(Math.random() * 360)
-        date.setDate(rand)
+    if(json.length == 0){
+        json = refresh_data()
 
-        var date_str = date.getFullYear() + "-"
-            + (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-"
-            + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate())
-
-        var price = Math.floor(Math.random() * (50000 - 10000) + 10000)
-        var hr = Math.floor(Math.random() * (9 - 2) + 2)
-
-        var id = i < 100 ?
-            i < 10 ?
-                "00" + i
-                : "0" + i
-            : "" + i
-
-        var js = {
-            from: from,
-            to: to,
-            date: date_str,
-            id: id,
-            price: price,
-            hr: hr
-        }
-
-        json.push(js)
+        Cookies.set('json_list', JSON.stringify(json))
     }
 
     // 更新前端select
@@ -122,6 +150,7 @@ $(document).ready(function () {
         // display number
         var y = 0
         for (var i = page_now * one_page_num; i < json.length && y < one_page_num + 1; i++) {
+            
             var value = json[i]
 
             /**
@@ -133,23 +162,23 @@ $(document).ready(function () {
 
             if (isGo) {
                 if (
-                    (!$("#from_where").val() || $("#from_where").val() == value.from)
-                    && (!$("#to_where").val() || $("#to_where").val() == value.to)
-                    && (!$("#from_time").val() || $("#from_time").val() == value.date)
+                    (!GET['from_where'] || GET['from_where'] == value.from)
+                    && (!GET['to_where'] || GET['to_where'] == value.to)
+                    && (!GET['from_time'] || GET['from_time'] == value.date)
                 )
                     ty = 0
 
             } else {
                 // depar date
-                var date_now = new Date($("#from_time").val())
+                var date_now = new Date(GET['from_time'])
                 // value date
                 var date_choose = new Date(value.date)
 
                 if (
-                    (!$("#from_where").val() || $("#from_where").val() == value.to)
-                    && (!$("#to_where").val() || $("#to_where").val() == value.from)
-                    && (!$("#to_time").val() || $("#to_time").val() == value.date)
-                    && (!$("#from_time").val() || date_choose >= date_now)
+                    (!GET['from_where'] || GET['from_where'] == value.to)
+                    && (!GET['to_where'] || GET['to_where'] == value.from)
+                    && (!GET['to_time'] || GET['to_time'] == value.date)
+                    && (!GET['from_time'] || date_choose >= date_now)
                 )
                     ty = 2
             }
@@ -214,7 +243,7 @@ $(document).ready(function () {
         var pre_page = $("#previous_back_page")
         var next_page = $("#next_back_page")
 
-        if ($("input[name='travel']:checked").val() == "one_way")
+        if (GET['travel'] == "one_way")
             $("#back_table").hide()
         else{
             $("#back_table").show()
@@ -224,6 +253,7 @@ $(document).ready(function () {
 
     // 开局初始化
     refresh_Go_list()
+    refresh_Back_list()
 
     $("#search").click(function () {
         page_now_back = 0
