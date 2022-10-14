@@ -2,90 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>USER</title>
+    <title>Search Result</title>
 
     <script type="text/javascript" src="../../js/vendor/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../../js/web_logic/user_home.js"></script>
 
     <link rel="stylesheet" href="../../css/customer.css">
 
-
-    <!--    <style>-->
-    <!--        #list, #from_where_list, #to_where_list {-->
-    <!--            overflow-y: scroll;-->
-    <!--            max-height: 100px;-->
-    <!--        }-->
-    <!--    </style>-->
-
 </head>
 <body>
 
-<div class="container">
-    <h1 class="title">Book your flight now</h1>
-
-    <div class="form">
-        <div class="form-title">Reservation</div>
-        <div class="form-content">
-
-            <div class="row">
-                <div class="col col-1 form-field">
-                    <label>
-                        <input type="radio" name="travel" value="one_way"/>
-                        oneway trip
-                    </label>
-                </div>
-                <div class="col col-1 form-field">
-                    <label>
-                        <input type="radio" name="travel" value="round" checked/>
-                        round trip
-                    </label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col col-1 form-field">
-                    <label for="from_where">From:</label>
-                    <select id="from_where">
-                        <option value="" disabled selected>Select your option</option>
-
-                    </select>
-                </div>
-                <div class="col col-1 form-field">
-                    <label for="to_where">To:</label>
-                    <select id="to_where">
-                        <option value="" disabled selected>Select your option</option>
-
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-1 form-field">
-                    <label for="from_time">departure date</label>
-                    <input id="from_time" type="date"/>
-                </div>
-                <div class="col col-1 form-field">
-                    <label for="to_time">return date</label>
-                    <input id="to_time" type="date"/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-1 form-field">
-                    <div class="button_container">
-                        <button id="search" type="button" class="button" onclick="toggleResults()">
-                            <label>search</label>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 <div class="container2">
-    <h1 class="title" id="search_results" style="display: none">search results</h1>
+    <h1 class="title" id="search_results">search results</h1>
 
-    <div id="results" class="form results" style="display: none">
+    <div id="results" class="form results">
 
         <div class="form-content" id="test1">
 
@@ -160,30 +90,11 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
 </div>
 
-
-<script>
-    function toggleResults() {
-        let div = document.getElementById('results');
-        if (div.style.display === 'none') {
-            div.style.display = '';
-            // } else {
-            //     div.style.display = 'none';
-        }
-
-        let div2 = document.getElementById('search_results');
-        if (div2.style.display === 'none') {
-            div2.style.display = '';
-            // } else {
-            //     div.style.display = 'none';
-        }
-    }
-</script>
 
 </body>
 </html>

@@ -2,107 +2,196 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>USER</title>
 
     <script type="text/javascript" src="../../js/vendor/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../../js/web_logic/user_home.js"></script>
 
-    <style>
-        #list, #from_where_list, #to_where_list {
-            overflow-y: scroll;
-            max-height: 100px;
-        }
-    </style>
+    <link rel="stylesheet" href="../../css/customer.css">
+
+
+    <!--    <style>-->
+    <!--        #list, #from_where_list, #to_where_list {-->
+    <!--            overflow-y: scroll;-->
+    <!--            max-height: 100px;-->
+    <!--        }-->
+    <!--    </style>-->
+
 </head>
 <body>
-user page
-<table border="1">
-    <tr>
-        <th colspan="2">
-            booking
-        </th>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <input type="radio" name="travel" value="one_way"/>One Way
-            <input type="radio" name="travel" value="round" checked/>Round
-        </td>
-    </tr>
-    <tr>
-        <td>
-            From <br/>
-            <input type="text" id="from_where"/>
-            <div id="from_where_list"></div>
-        </td>
-        <td>
-            To <br/>
-            <input type="text" id="to_where"/>
-            <div id="to_where_list"></div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Departure date <br/>
-            <input type="date" id="from_time"/>
-        </td>
-        <td>
-            Return date <br/>
-            <input type="date" id="to_time"/>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <button id="search">
-                Search
-            </button>
-        </td>
-    </tr>
-</table>
 
-<table border="1">
-    <tr>
-        <td>
-            Go
-        </td>
-        <td>
-            Back
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div id="go_traval_list">
+<div class="container">
+    <h1 class="title">Book your flight now</h1>
+
+    <div class="form">
+        <div class="form-title">Reservation</div>
+        <div class="form-content">
+
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <label>
+                        <input type="radio" name="travel" value="one_way"/>
+                        oneway trip
+                    </label>
+                </div>
+                <div class="col col-1 form-field">
+                    <label>
+                        <input type="radio" name="travel" value="round" checked/>
+                        round trip
+                    </label>
+                </div>
             </div>
-        </td>
-        <td>
-            <div id="back_traval_list">
+
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <label for="from_where">From:</label>
+                    <select id="from_where">
+                        <option value="" disabled selected>Select your option</option>
+
+                    </select>
+                </div>
+                <div class="col col-1 form-field">
+                    <label for="to_where">To:</label>
+                    <select id="to_where">
+                        <option value="" disabled selected>Select your option</option>
+
+                    </select>
+                </div>
             </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div>
-                <button id="previous_go_page">
-                    <-
-                </button>
-                <button id="next_go_page">
-                    ->
-                </button>
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <label for="from_time">departure date</label>
+                    <input id="from_time" type="date"/>
+                </div>
+                <div class="col col-1 form-field">
+                    <label for="to_time">return date</label>
+                    <input id="to_time" type="date"/>
+                </div>
             </div>
-        </td>
-        <td>
-            <div>
-                <button id="previous_back_page">
-                    <-
-                </button>
-                <button id="next_back_page">
-                    ->
-                </button>
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <div class="button_container">
+                        <a href="search.html">
+                            <button id="search" type="button" class="button">
+                                <label>search</label>
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </td>
-    </tr>
-</table>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="container2">-->
+<!--    <h1 class="title" id="search_results" style="display: none">search results</h1>-->
+
+<!--    <div id="results" class="form results" style="display: none">-->
+
+<!--        <div class="form-content" id="test1">-->
+
+
+<!--            <div id="result" class="table-wrapper">-->
+<!--                <h2>Departure</h2>-->
+<!--                <table class="fl-table">-->
+<!--                    <thead>-->
+<!--                    <tr>-->
+<!--                        <th><label>id</label></th>-->
+<!--                        <th><label>from</label></th>-->
+<!--                        <th><label>to</label></th>-->
+<!--                        <th><label>date</label></th>-->
+<!--                        <th><label>price</label></th>-->
+<!--                        <th><label>hour</label></th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody id="go_data">-->
+
+<!--                    </tbody>-->
+<!--                </table>-->
+
+<!--                <div class="row">-->
+<!--                    <div class="col col-1 form-field">-->
+<!--                        <div class="button_container">-->
+<!--                            <button id="previous_go_page" type="button" class="button">-->
+<!--                                <- -->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col col-1 form-field">-->
+<!--                        <div class="button_container">-->
+<!--                            <button id="next_go_page" type="button" class="button">-->
+<!--                                ->-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div id="back_table">-->
+<!--                    <h2>Return</h2>-->
+<!--                    <table class="fl-table">-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th><label>id</label></th>-->
+<!--                            <th><label>from</label></th>-->
+<!--                            <th><label>to</label></th>-->
+<!--                            <th><label>date</label></th>-->
+<!--                            <th><label>price</label></th>-->
+<!--                            <th><label>hour</label></th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody id="back_travel_list">-->
+
+<!--                        </tbody>-->
+<!--                    </table>-->
+
+<!--                    <div class="row">-->
+<!--                        <div class="col col-1 form-field">-->
+<!--                            <div class="button_container">-->
+<!--                                <button id="previous_back_page" type="button" class="button">-->
+<!--                                    <- -->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col col-1 form-field">-->
+<!--                            <div class="button_container">-->
+<!--                                <button id="next_back_page" type="button" class="button">-->
+<!--                                    ->-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<script>
+    // function toggleResults() {
+    //     $(document).ready(function () {
+    //         // if (succ) {
+    //             // $("#login_form").attr("search.html");
+    //         // }
+    //     });
+
+        // let div = document.getElementById('results');
+        // if (div.style.display === 'none') {
+        //     div.style.display = '';
+        //     // } else {
+        //     //     div.style.display = 'none';
+        // }
+        //
+        // let div2 = document.getElementById('search_results');
+        // if (div2.style.display === 'none') {
+        //     div2.style.display = '';
+        //     // } else {
+        //     //     div.style.display = 'none';
+        // }
+    // }
+</script>
 
 </body>
 </html>

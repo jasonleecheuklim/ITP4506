@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46675ef3-df41-41ca-98a1-1d1b8c991f56" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/datepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/plugins.js" beforeDir="false" />
     </list>
     <list id="188556e0-7b15-467f-a2e4-876593c89cd8" name="Changes by lkho" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -58,6 +65,7 @@
       <recent name="$PROJECT_DIR$/style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ITP4506(NEW)/html/home" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/css/fonts" />
     </key>
@@ -79,7 +87,16 @@
       <workItem from="1665417204539" duration="6125000" />
       <workItem from="1665459302075" duration="1415000" />
       <workItem from="1665503611566" duration="4782000" />
-      <workItem from="1665536448492" duration="2508000" />
+      <workItem from="1665536448492" duration="3942000" />
+      <workItem from="1665558134388" duration="605000" />
+      <workItem from="1665643176800" duration="403000" />
+      <workItem from="1665644213763" duration="453000" />
+      <workItem from="1665671747045" duration="262000" />
+      <workItem from="1665672331581" duration="4511000" />
+      <workItem from="1665730463599" duration="43000" />
+      <workItem from="1665738784763" duration="2528000" />
+      <workItem from="1665761307979" duration="1536000" />
+      <workItem from="1665763602777" duration="608000" />
     </task>
     <servers />
   </component>
