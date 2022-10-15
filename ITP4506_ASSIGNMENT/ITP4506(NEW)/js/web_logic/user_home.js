@@ -31,7 +31,13 @@ $(document).ready(function () {
     var json = Cookies.get('json_list') == undefined ? [] : JSON.parse(Cookies.get('json_list'))
 
     // 我受不了了，随机创建列表
-    var city = ["HKG", 'TYO', 'TPE', 'SEL', 'LHR']
+    var city = [
+                    {"code": "HKG", "name": 'Hong Kong International'}, 
+                    {"code": 'TYO', "name": 'Tokyo Metropolitan Area'}, 
+                    {"code": 'TPE', "name": 'Taiwan Taoyuan International'}, 
+                    {"code": 'SEL', "name": 'Gimpo International'}, 
+                    {"code": 'LHR', "name": 'London Heathrow International'}
+                ]
     var how_many = 300
 
     function refresh_data() {
@@ -43,8 +49,8 @@ $(document).ready(function () {
                 rand2 = Math.floor(Math.random() * city.length)
             }
 
-            var from = city[rand]
-            var to = city[rand2]
+            var from = city[rand]['code']
+            var to = city[rand2]['code']
 
             var date = new Date()
             rand = date.getDate() + Math.floor(Math.random() * 30)
@@ -87,8 +93,9 @@ $(document).ready(function () {
 
     // 更新前端select
     city.forEach(element => {
-        $("#from_where").append("<option>" + element + "</option>")
-        $("#to_where").append("<option>" + element + "</option>")
+        var e = "<option value='" + element.code + "'>(" + element.code + ")"+ element.name +"</option>"
+        $("#from_where").append(e)
+        $("#to_where").append(e)
     });
 
     // 创建预览列表
