@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
     // 获取get
-    function get_get(){
+    function get_get() {
         value = window.location.href.split("?")
-        if(value[1]){
+        if (value[1]) {
             GETs = value[1].split("&")
             GET = new Array()
 
@@ -23,13 +23,13 @@ $(document).ready(function () {
     var one_page_num = 12
 
     // 航班列表
-    var json = Cookies.get('json_list') == undefined? []: JSON.parse(Cookies.get('json_list'))
+    var json = Cookies.get('json_list') == undefined ? [] : JSON.parse(Cookies.get('json_list'))
 
     // 我受不了了，随机创建列表
     var city = ["HKG", 'TYO', 'TPE', 'SEL', 'LHR']
-    var how_many = 30
+    var how_many = 300
 
-    function refresh_data(){
+    function refresh_data() {
         var json_list = []
         for (let i = 0; i < how_many; i++) {
             var rand = Math.floor(Math.random() * city.length)
@@ -37,21 +37,21 @@ $(document).ready(function () {
             while (rand == rand2) {
                 rand2 = Math.floor(Math.random() * city.length)
             }
-    
+
             var from = city[rand]
             var to = city[rand2]
-    
+
             var date = new Date()
-            rand = date.getDate() + Math.floor(Math.random() * 360)
+            rand = date.getDate() + Math.floor(Math.random() * 30)
             date.setDate(rand)
-    
+
             var date_str = date.getFullYear() + "-"
                 + (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-"
                 + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate())
-    
+
             var price = Math.floor(Math.random() * (50000 - 10000) + 10000)
             var hr = Math.floor(Math.random() * (9 - 2) + 2)
-    
+
             var id = i < 100 ?
                 i < 10 ?
                     "00" + i
@@ -74,7 +74,7 @@ $(document).ready(function () {
 
     }
 
-    if(json.length == 0){
+    if (json.length == 0) {
         json = refresh_data()
 
         Cookies.set('json_list', JSON.stringify(json))
@@ -113,19 +113,19 @@ $(document).ready(function () {
         }
     })
 
-    function select_change(select, change){
+    function select_change(select, change) {
         change.children().show()
-        change.children("option:contains('" + select.val() + "')").map(function(){
-            if($(this).text() == select.val())
+        change.children("option:contains('" + select.val() + "')").map(function () {
+            if ($(this).text() == select.val())
                 $(this).hide()
         })
     }
 
     // select 防原地起飞
-    $("#from_where").change(function(){
+    $("#from_where").change(function () {
         select_change($(this), $("#to_where"))
     })
-    $("#to_where").change(function(){
+    $("#to_where").change(function () {
         select_change($(this), $("#from_where"))
     })
 
@@ -150,7 +150,7 @@ $(document).ready(function () {
         // display number
         var y = 0
         for (var i = page_now * one_page_num; i < json.length && y < one_page_num + 1; i++) {
-            
+
             var value = json[i]
 
             /**
@@ -193,13 +193,13 @@ $(document).ready(function () {
             //     + "</p>"
 
             str = "<tr>"
-                    + "<td>" + value.id + "</td>"
-                    + "<td>" + value.from + "</td>"
-                    + "<td>" + value.to + "</td>"
-                    + "<td>" + value.date + "</td>"
-                    + "<td>$ " + value.price + "</td>"
-                    + "<td>" + value.hr + " h</td>"
-                    + "</tr>"
+                + "<td>" + value.id + "</td>"
+                + "<td>" + value.from + "</td>"
+                + "<td>" + value.to + "</td>"
+                + "<td>" + value.date + "</td>"
+                + "<td>$ " + value.price + "</td>"
+                + "<td>" + value.hr + " h</td>"
+                + "</tr>"
 
             if (ty == 0 || ty == 2) {
                 if (y < one_page_num)
@@ -209,10 +209,10 @@ $(document).ready(function () {
         }
 
         // 填充空行
-        if(y < 12){
+        if (y < 12) {
             str = "<tr>"
-                    + "<td colspan='6'>&nbsp;</td>"
-                    + "</tr>"
+                + "<td colspan='6'>&nbsp;</td>"
+                + "</tr>"
             for (var i = 0; i < 12 - y; i++) {
                 list_change.append(str)
             }
@@ -245,7 +245,7 @@ $(document).ready(function () {
 
         if (GET['travel'] == "one_way")
             $("#back_table").hide()
-        else{
+        else {
             $("#back_table").show()
             refresh_list(page_now_back, list, false, pre_page, next_page)
         }
