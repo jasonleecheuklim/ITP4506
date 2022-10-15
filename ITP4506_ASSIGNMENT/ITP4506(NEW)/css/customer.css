@@ -47,11 +47,11 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
-    /*outline: 1px solid deepskyblue; !* debug *!*/
+    outline: 1px solid deepskyblue; /* debug */
 }
 
 .col {
-    /*outline: 1px solid orangered; !* debug *!*/
+    outline: 1px solid orangered; /* debug */
 }
 
 .col-1 {
