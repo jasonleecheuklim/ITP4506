@@ -1,11 +1,12 @@
 $(document).ready(function () {
 
+    GET = new Array()
+
     // 获取get
     function get_get() {
         value = window.location.href.split("?")
         if (value[1]) {
             GETs = value[1].split("&")
-            GET = new Array()
 
             GETs.forEach(element => {
                 k_v = element.split("=")
@@ -21,6 +22,10 @@ $(document).ready(function () {
     var page_now_back = 0
     // 每页显示数量
     var one_page_num = 12
+
+    // 来回航班选择
+    var booking_go = ""
+    var booking_back = ""
 
     // 航班列表
     var json = Cookies.get('json_list') == undefined ? [] : JSON.parse(Cookies.get('json_list'))
@@ -183,16 +188,10 @@ $(document).ready(function () {
                     ty = 2
             }
 
-            // str = "<p>"
-            //     + "\tid: " + value.id
-            //     + "\tFrom: " + value.from
-            //     + "\tTo: " + value.to
-            //     + "\tdate: " + value.date
-            //     + "\tprice: " + value.price
-            //     + "\thr: " + value.hr
-            //     + "</p>"
+            // extra test
 
-            str = "<tr>"
+
+            str = "<tr id='" + value.id + ((isGo && booking_go == value.id)||(!isGo && booking_back == value.id)? "'class='select_tr'" :'') + "'>"
                 + "<td>" + value.id + "</td>"
                 + "<td>" + value.from + "</td>"
                 + "<td>" + value.to + "</td>"
@@ -278,5 +277,48 @@ $(document).ready(function () {
     $("#next_back_page").click(function () {
         page_now_back++
         refresh_Back_list()
+    })
+
+    $("table").on('click', 'td', function(){
+        // 如有其他选中先撇除
+        if($(this).parent().parent().attr("id") == "go_data"){
+            // alert(booking_go)
+            if(booking_go)
+                $("#go_data").children("#" + booking_go).toggleClass('select_tr')
+
+            booking_go = $(this).parent().attr("id")
+            $(this).parent().toggleClass('select_tr')
+        }else{
+            if(booking_back)
+                $("#back_travel_list").children("#" + booking_back).toggleClass('select_tr')
+
+            booking_back = $(this).parent().attr("id")
+            $(this).parent().toggleClass('select_tr')
+        }
+    })
+
+    $('#finish_booking').click(function(){
+        // alert(JSON.stringify(json[Number(booking_go)]) + ", " + JSON.stringify(json[Number(booking_back)]))
+        // if (GET['travel'] == 'one_way'){
+
+        // }
+
+        // 都选好了？
+        if(
+            (booking_go)
+            && (GET['travel'] == 'one_way'? true : booking_back)
+        ){
+            window.location.href = "booking.html?go=" + booking_go + "&back=" + booking_back
+        }else{
+
+            var str = ""
+            if(!booking_go)
+                str += "DEPARTURE"
+
+            if(GET['travel'] != 'one_way' && !booking_back)
+                str += !str? "RETURN": " & RETURN"
+            
+            alert("Please choose " + str)
+        }
     })
 })
