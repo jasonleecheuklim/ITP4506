@@ -8,6 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/forget_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/forget_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/register.html" afterDir="false" />
     </list>
@@ -91,7 +93,7 @@
       <workItem from="1665730463599" duration="43000" />
       <workItem from="1665738784763" duration="2528000" />
       <workItem from="1665761307979" duration="1536000" />
-      <workItem from="1665763602777" duration="29306000" />
+      <workItem from="1665763602777" duration="32849000" />
     </task>
     <servers />
   </component>
