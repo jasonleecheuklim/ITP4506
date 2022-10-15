@@ -8,12 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_home.js" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/register.html" afterDir="false" />
     </list>
-    <list id="188556e0-7b15-467f-a2e4-876593c89cd8" name="Changes by lkho" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +91,7 @@
       <workItem from="1665730463599" duration="43000" />
       <workItem from="1665738784763" duration="2528000" />
       <workItem from="1665761307979" duration="1536000" />
-      <workItem from="1665763602777" duration="23344000" />
+      <workItem from="1665763602777" duration="29306000" />
     </task>
     <servers />
   </component>

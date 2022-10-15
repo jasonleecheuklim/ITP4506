@@ -10,7 +10,8 @@ html {
 }
 
 body {
-    background-image: url("../img/banner-bg.jpg");
+    /*background-image: url("../img/contact-01.jpg");*/
+background-color: rgb(187, 218, 231);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
