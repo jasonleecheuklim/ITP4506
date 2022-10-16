@@ -130,6 +130,33 @@ header {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+.form input.rounded {
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 4px 7px;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 96%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.form .button1{
+    background-color: rgb(115, 0, 255);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form .button1:hover,
+.form .button1:focus,
+.form .button1:active {
+    background-color: rgb(17, 227, 234);
+}
+
+
 .form button {
     background-color: rgb(0, 191, 255);
     color: white;

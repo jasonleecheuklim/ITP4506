@@ -4,16 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Operator</title>
+
+    <script type="text/javascript" src="../../js/vendor/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/js.cookie.js"></script>
+    <script type="text/javascript" src="../../js/web_logic/user_home.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#operator_reset_form").submit(function () {
+                alert("Password successfully reset")
+            })
+        })
+    </script>
+
+    <link rel="stylesheet" href="../../css/customer.css">
+
 </head>
 <body>
 
 <header>
     <div class="header-bottom">
-        <img src="../../img/logo.png" alt="Girl in a jacket">
-
+        <a href="user.html">
+            <img src="../../img/logo.png" alt="Girl in a jacket">
+        </a>
     </div>
 </header>
-    oper home
+
+<div class="container">
+    <h1 class="title">Welcome Operator</h1>
+
+    <div class="form">
+        <div class="form-title">Please reset the password</div>
+        <form id="operator_reset_form" class="form-content" action="user.html">
+
+            <div class="col form-field">
+                <label>
+                    Old password:
+                    <input type="password" name="old_password" class="rounded" required/>
+                </label>
+            </div>
+            <div class="col form-field">
+                <label>
+                    New password:
+                    <input type="password" name="new_password" class="rounded" required/>
+                </label>
+            </div>
+            <div class="col form-field">
+                <label>
+                    Confirm new password:
+                    <input type="password" name="confirm_password" class="rounded" required/>
+                </label>
+            </div>
+
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <div class="button_container">
+                        <button id="login" form="operator_reset_form" type="submit" class="button1">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        <h3>IVE Airlines</h3>
+        <p>Your safety and well-being matter to us. That’s why we are committed to putting meticulous care at every
+            stage of your journey, to provide you with a peace of mind when travelling with IVE Airlines. </p>
+    </div>
+    <div class="footer-bottom">
+
+        <div class="footer-menu">
+            <ul class="f-menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+        </div>
+        <p>copyright &copy; <a href="#">IVE Airline Company</a></p>
+    </div>
+
+</footer>
+
 </body>
 </html>
