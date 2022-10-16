@@ -128,7 +128,7 @@ $(document).ready(function () {
     function select_change(select, change) {
         change.children().show()
         change.children("option:contains('" + select.val() + "')").map(function () {
-            if ($(this).text() == select.val())
+            if ($(this).val() == select.val())
                 $(this).hide()
         })
     }
