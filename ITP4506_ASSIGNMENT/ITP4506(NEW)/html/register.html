@@ -36,7 +36,7 @@
     <h1 class="title">Register</h1>
 
     <div class="form">
-        <form id="register_form" class="form-content" action="login.html">
+        <form id="register_form" class="form-content" action="loading.html">
 
             <div class="col form-field">
                 <label>
@@ -46,14 +46,14 @@
             </div>
             <div class="col form-field">
                 <label>
-                    Password:
-                    <input type="password" name="password" class="rounded" required/>
+                    Password: (It must be at least 8 characters in length)
+                    <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
                 </label>
             </div>
             <div class="col form-field">
                 <label>
                     Confirm Password:
-                    <input type="password" name="password" class="rounded" required/>
+                    <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
                 </label>
             </div>
 
