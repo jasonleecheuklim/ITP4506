@@ -305,7 +305,8 @@ $(document).ready(function () {
         refresh_Back_list()
     })
 
-    $("table").on('click', 'td', function () {
+    $("table")
+        .on('click', 'td', function () {
         // 如有其他选中先撇除
         if ($(this).parent().parent().attr("id") == "go_data") {
             // alert(booking_go)
@@ -321,7 +322,10 @@ $(document).ready(function () {
             booking_back = $(this).parent().attr("id")
             $(this).parent().toggleClass('select_tr')
         }
-    })
+        })
+        .on('mouseenter mouseleave', 'td', function(){
+            $(this).parent().toggleClass('tr_hover')
+        })
 
     $('#finish_booking').click(function () {
         // alert(JSON.stringify(json[Number(booking_go)]) + ", " + JSON.stringify(json[Number(booking_back)]))
