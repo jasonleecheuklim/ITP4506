@@ -90,7 +90,7 @@ $(document).ready(function () {
 
     if (json.length == 0) {
         json = refresh_data()
-        
+
         localStorage.setItem('json_list', JSON.stringify(json))
     }
 
@@ -163,7 +163,7 @@ $(document).ready(function () {
         list_change.children("tr").remove()
 
         // 正在使用的data
-        var get_data_arr = isGo? screen_json.go: screen_json.back
+        var get_data_arr = isGo ? screen_json.go : screen_json.back
 
         // display number
         var y = 0
@@ -183,7 +183,7 @@ $(document).ready(function () {
 
             if (y < one_page_num)
                 list_change.append(str)
-            
+
             y++
         }
 
@@ -235,22 +235,22 @@ $(document).ready(function () {
     refresh_Back_list()
 
     // 筛选列表
-    function list_screening(){
-        var said = {'go':[], 'back': []}
+    function list_screening() {
+        var said = {'go': [], 'back': []}
         json.forEach(value => {
             /**
              * 0 = Go
              * 1 = pass
              * 2 = back
              */
-             var ty = 1
-             
+            var ty = 1
+
             if (
                 (!GET['from_where'] || GET['from_where'] == value.from)
                 && (!GET['to_where'] || GET['to_where'] == value.to)
                 && (!GET['from_time'] || GET['from_time'] == value.date)
             ) {
-                    ty = 0
+                ty = 0
 
             } else {
                 // depar date
@@ -267,9 +267,9 @@ $(document).ready(function () {
                     ty = 2
             }
 
-            if (ty ==  0){
+            if (ty == 0) {
                 said.go.push(value)
-            }else if(ty == 2){
+            } else if (ty == 2) {
                 said.back.push(value)
             }
 
@@ -307,23 +307,23 @@ $(document).ready(function () {
 
     $("table")
         .on('click', 'td', function () {
-        // 如有其他选中先撇除
-        if ($(this).parent().parent().attr("id") == "go_data") {
-            // alert(booking_go)
-            if (booking_go)
-                $("#go_data").children("#" + booking_go).toggleClass('select_tr')
+            // 如有其他选中先撇除
+            if ($(this).parent().parent().attr("id") == "go_data") {
+                // alert(booking_go)
+                if (booking_go)
+                    $("#go_data").children("#" + booking_go).toggleClass('select_tr')
 
-            booking_go = $(this).parent().attr("id")
-            $(this).parent().toggleClass('select_tr')
-        } else {
-            if (booking_back)
-                $("#back_travel_list").children("#" + booking_back).toggleClass('select_tr')
+                booking_go = $(this).parent().attr("id")
+                $(this).parent().toggleClass('select_tr')
+            } else {
+                if (booking_back)
+                    $("#back_travel_list").children("#" + booking_back).toggleClass('select_tr')
 
-            booking_back = $(this).parent().attr("id")
-            $(this).parent().toggleClass('select_tr')
-        }
+                booking_back = $(this).parent().attr("id")
+                $(this).parent().toggleClass('select_tr')
+            }
         })
-        .on('mouseenter mouseleave', 'td', function(){
+        .on('mouseenter mouseleave', 'td', function () {
             $(this).parent().toggleClass('tr_hover')
         })
 
