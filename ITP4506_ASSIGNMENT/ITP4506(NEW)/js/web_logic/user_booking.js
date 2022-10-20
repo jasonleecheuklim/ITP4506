@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     get_get()
 
-    var json = JSON.parse(Cookies.get('json_list'))
+    var json = JSON.parse(localStorage.getItem('json_list'))
 
     // 视情况隐藏back
     if (!GET['back']) {

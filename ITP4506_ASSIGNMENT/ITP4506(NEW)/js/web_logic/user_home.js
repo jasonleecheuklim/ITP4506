@@ -28,7 +28,10 @@ $(document).ready(function () {
     var booking_back = ""
 
     // 航班列表
-    var json = Cookies.get('json_list') == undefined ? [] : JSON.parse(Cookies.get('json_list'))
+    var json = localStorage.getItem('json_list') == null ? [] : JSON.parse(localStorage.getItem('json_list'))
+    // 筛选后的列表
+    // var screen_json = {'go':[], 'back': []}
+    var screen_json = list_screening()
 
     // 我受不了了，随机创建列表
     var city = [
@@ -87,8 +90,8 @@ $(document).ready(function () {
 
     if (json.length == 0) {
         json = refresh_data()
-
-        Cookies.set('json_list', JSON.stringify(json))
+        
+        localStorage.setItem('json_list', JSON.stringify(json))
     }
 
     // 更新前端select
@@ -159,43 +162,14 @@ $(document).ready(function () {
     function refresh_list(page_now, list_change, isGo, pre_page, next_page) {
         list_change.children("tr").remove()
 
+        // 正在使用的data
+        var get_data_arr = isGo? screen_json.go: screen_json.back
+
         // display number
         var y = 0
-        for (var i = page_now * one_page_num; i < json.length && y < one_page_num + 1; i++) {
+        for (var i = page_now * one_page_num; i < get_data_arr.length && y < one_page_num + 1; i++) {
 
-            var value = json[i]
-
-            /**
-             * 0 = Go
-             * 1 = pass
-             * 2 = back
-             */
-            var ty = 1
-
-            if (isGo) {
-                if (
-                    (!GET['from_where'] || GET['from_where'] == value.from)
-                    && (!GET['to_where'] || GET['to_where'] == value.to)
-                    && (!GET['from_time'] || GET['from_time'] == value.date)
-                )
-                    ty = 0
-
-            } else {
-                // depar date
-                var date_now = new Date(GET['from_time'])
-                // value date
-                var date_choose = new Date(value.date)
-
-                if (
-                    (!GET['from_where'] || GET['from_where'] == value.to)
-                    && (!GET['to_where'] || GET['to_where'] == value.from)
-                    && (!GET['to_time'] || GET['to_time'] == value.date)
-                    && (!GET['from_time'] || date_choose >= date_now)
-                )
-                    ty = 2
-            }
-
-            // extra test
+            var value = get_data_arr[i]
 
 
             str = "<tr id='" + value.id + ((isGo && booking_go == value.id) || (!isGo && booking_back == value.id) ? "'class='select_tr'" : '') + "'>"
@@ -207,11 +181,10 @@ $(document).ready(function () {
                 + "<td>" + value.hr + " h</td>"
                 + "</tr>"
 
-            if (ty == 0 || ty == 2) {
-                if (y < one_page_num)
-                    list_change.append(str)
-                y++
-            }
+            if (y < one_page_num)
+                list_change.append(str)
+            
+            y++
         }
 
         // 填充空行
@@ -261,9 +234,55 @@ $(document).ready(function () {
     refresh_Go_list()
     refresh_Back_list()
 
+    // 筛选列表
+    function list_screening(){
+        var said = {'go':[], 'back': []}
+        json.forEach(value => {
+            /**
+             * 0 = Go
+             * 1 = pass
+             * 2 = back
+             */
+             var ty = 1
+             
+            if (
+                (!GET['from_where'] || GET['from_where'] == value.from)
+                && (!GET['to_where'] || GET['to_where'] == value.to)
+                && (!GET['from_time'] || GET['from_time'] == value.date)
+            ) {
+                    ty = 0
+
+            } else {
+                // depar date
+                var date_now = new Date(GET['from_time'])
+                // value date
+                var date_choose = new Date(value.date)
+
+                if (
+                    (!GET['from_where'] || GET['from_where'] == value.to)
+                    && (!GET['to_where'] || GET['to_where'] == value.from)
+                    && (!GET['to_time'] || GET['to_time'] == value.date)
+                    && (!GET['from_time'] || date_choose >= date_now)
+                )
+                    ty = 2
+            }
+
+            if (ty ==  0){
+                said.go.push(value)
+            }else if(ty == 2){
+                said.back.push(value)
+            }
+
+        });
+
+        return said
+        // localStorage.setItem('screen_json', JSON.stringify(screen_json))
+    }
+
     $("#search").click(function () {
         page_now_back = 0
         page_now_go = 0
+        list_screening()
         refresh_Go_list()
         refresh_Back_list()
     })
