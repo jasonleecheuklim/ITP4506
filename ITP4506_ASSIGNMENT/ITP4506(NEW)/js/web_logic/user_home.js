@@ -192,9 +192,9 @@ $(document).ready(function () {
             str = "<tr>"
                 + "<td colspan='6'>&nbsp;</td>"
                 + "</tr>"
-            for (var i = 0; i < 12 - y; i++) {
-                list_change.append(str)
-            }
+            // for (var i = 0; i < 12 - y; i++) {
+            //     list_change.append(str)
+            // }
         }
 
         // 页面控制

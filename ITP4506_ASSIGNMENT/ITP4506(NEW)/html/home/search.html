@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +14,13 @@
         .select_tr {
             background-color: aqua !important;
         }
+
+        .select_tr:hover,
+        .select_tr .button1:focus,
+        .select_tr .button1:active {
+            background-color: rgb(17, 227, 234);
+        }
+
     </style>
     <link rel="stylesheet" href="../../css/customer.css">
 
@@ -38,7 +45,7 @@
 </header>
 
 <div class="container">
-    <h1 class="title" id="search_results">search results</h1>
+    <h1 class="title" id="search_results">choose flight(s)</h1>
 
     <div id="results" class="form results">
 
@@ -46,7 +53,7 @@
 
 
             <div id="result" class="table-wrapper">
-                <h2>Departure</h2>
+                <h2>Departing flight</h2><br>
                 <table class="fl-table">
                     <thead>
                     <tr>
@@ -81,7 +88,7 @@
                 </div>
 
                 <div id="back_table">
-                    <h2>Return</h2>
+                    <h2>Returning flight</h2><br>
                     <table class="fl-table">
                         <thead>
                         <tr>

@@ -33,7 +33,7 @@
 </header>
 
 <div class="container">
-    <h1 class="title">Welcome User</h1>
+    <h1 class="title">Ready for your next trip? Book with us now.</h1>
 
     <form class="form" method="get" action="search.html">
         <div class="form-title">Search your flight trip</div>
@@ -56,15 +56,15 @@
 
             <div class="row">
                 <div class="col col-1 form-field">
-                    <label for="from_where">From:</label>
-                    <select id="from_where" name="from_where">
+                    <label for="from_where">leaving from:</label>
+                    <select id="from_where" name="from_where" required>
                         <option value="" disabled selected>Select your option</option>
 
                     </select>
                 </div>
                 <div class="col col-1 form-field">
-                    <label for="to_where">To:</label>
-                    <select id="to_where" name="to_where">
+                    <label for="to_where">going to:</label>
+                    <select id="to_where" name="to_where" required>
                         <option value="" disabled selected>Select your option</option>
 
                     </select>
@@ -72,11 +72,11 @@
             </div>
             <div class="row">
                 <div class="col col-1 form-field">
-                    <label for="from_time">departure date</label>
-                    <input id="from_time" type="date" name="from_time"/>
+                    <label for="from_time">departing on</label>
+                    <input id="from_time" type="date" name="from_time" required/>
                 </div>
                 <div class="col col-1 form-field">
-                    <label for="to_time">return date</label>
+                    <label for="to_time">returning on</label>
                     <input id="to_time" type="date" name="to_time"/>
                 </div>
             </div>
