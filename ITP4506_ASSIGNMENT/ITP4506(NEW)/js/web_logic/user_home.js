@@ -32,12 +32,12 @@ $(document).ready(function () {
 
     // 我受不了了，随机创建列表
     var city = [
-                    {"code": "HKG", "name": 'Hong Kong International'}, 
-                    {"code": 'TYO', "name": 'Tokyo Metropolitan Area'}, 
-                    {"code": 'TPE', "name": 'Taiwan Taoyuan International'}, 
-                    {"code": 'SEL', "name": 'Gimpo International'}, 
-                    {"code": 'LHR', "name": 'London Heathrow International'}
-                ]
+        {"code": "HKG", "name": 'Hong Kong International'},
+        {"code": 'TYO', "name": 'Tokyo Metropolitan Area'},
+        {"code": 'TPE', "name": 'Taiwan Taoyuan International'},
+        {"code": 'SEL', "name": 'Gimpo International'},
+        {"code": 'LHR', "name": 'London Heathrow International'}
+    ]
     var how_many = 300
 
     function refresh_data() {
@@ -93,7 +93,7 @@ $(document).ready(function () {
 
     // 更新前端select
     city.forEach(element => {
-        var e = "<option value='" + element.code + "'>(" + element.code + ")"+ element.name +"</option>"
+        var e = "<option value='" + element.code + "'>(" + element.code + ")" + element.name + "</option>"
         $("#from_where").append(e)
         $("#to_where").append(e)
     });
@@ -198,8 +198,8 @@ $(document).ready(function () {
             // extra test
 
 
-            str = "<tr id='" + value.id + ((isGo && booking_go == value.id)||(!isGo && booking_back == value.id)? "'class='select_tr'" :'') + "'>"
-                + "<td>" + value.id + "</td>"
+            str = "<tr id='" + value.id + ((isGo && booking_go == value.id) || (!isGo && booking_back == value.id) ? "'class='select_tr'" : '') + "'>"
+                + "<td>IVE-" + value.id + "</td>"
                 + "<td>" + value.from + "</td>"
                 + "<td>" + value.to + "</td>"
                 + "<td>" + value.date + "</td>"
@@ -286,17 +286,17 @@ $(document).ready(function () {
         refresh_Back_list()
     })
 
-    $("table").on('click', 'td', function(){
+    $("table").on('click', 'td', function () {
         // 如有其他选中先撇除
-        if($(this).parent().parent().attr("id") == "go_data"){
+        if ($(this).parent().parent().attr("id") == "go_data") {
             // alert(booking_go)
-            if(booking_go)
+            if (booking_go)
                 $("#go_data").children("#" + booking_go).toggleClass('select_tr')
 
             booking_go = $(this).parent().attr("id")
             $(this).parent().toggleClass('select_tr')
-        }else{
-            if(booking_back)
+        } else {
+            if (booking_back)
                 $("#back_travel_list").children("#" + booking_back).toggleClass('select_tr')
 
             booking_back = $(this).parent().attr("id")
@@ -304,27 +304,27 @@ $(document).ready(function () {
         }
     })
 
-    $('#finish_booking').click(function(){
+    $('#finish_booking').click(function () {
         // alert(JSON.stringify(json[Number(booking_go)]) + ", " + JSON.stringify(json[Number(booking_back)]))
         // if (GET['travel'] == 'one_way'){
 
         // }
 
         // 都选好了？
-        if(
+        if (
             (booking_go)
-            && (GET['travel'] == 'one_way'? true : booking_back)
-        ){
+            && (GET['travel'] == 'one_way' ? true : booking_back)
+        ) {
             window.location.href = "booking.html?go=" + booking_go + "&back=" + booking_back
-        }else{
+        } else {
 
             var str = ""
-            if(!booking_go)
+            if (!booking_go)
                 str += "DEPARTURE"
 
-            if(GET['travel'] != 'one_way' && !booking_back)
-                str += !str? "RETURN": " & RETURN"
-            
+            if (GET['travel'] != 'one_way' && !booking_back)
+                str += !str ? "RETURN" : " & RETURN"
+
             alert("Please choose " + str)
         }
     })

@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46675ef3-df41-41ca-98a1-1d1b8c991f56" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/loading.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/loading.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITP4506(NEW)/img/IVE-logo-png.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/css/customer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/operator.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/operator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/html/home/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_home.js" beforeDir="false" afterPath="$PROJECT_DIR$/ITP4506(NEW)/js/web_logic/user_home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +64,7 @@
       <recent name="$PROJECT_DIR$/style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ITP4506(NEW)/img" />
       <recent name="$PROJECT_DIR$/ITP4506(NEW)/html/home" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/css/fonts" />
@@ -94,7 +97,9 @@
       <workItem from="1665738784763" duration="2528000" />
       <workItem from="1665761307979" duration="1536000" />
       <workItem from="1665763602777" duration="43663000" />
-      <workItem from="1665976895938" duration="3419000" />
+      <workItem from="1665976895938" duration="4402000" />
+      <workItem from="1666233190378" duration="621000" />
+      <workItem from="1666236448103" duration="4906000" />
     </task>
     <servers />
   </component>

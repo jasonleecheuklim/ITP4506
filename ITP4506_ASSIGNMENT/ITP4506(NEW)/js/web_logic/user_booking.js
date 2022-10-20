@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     GET = new Array()
 
     // 获取get
@@ -19,7 +19,7 @@ $(document).ready(function(){
     var json = JSON.parse(Cookies.get('json_list'))
 
     // 视情况隐藏back
-    if(!GET['back']){
+    if (!GET['back']) {
         $("#back_detail").hide()
     }
 
