@@ -148,7 +148,7 @@ $(document).ready(function () {
         // alert($(this).val())
         var date_now = new Date()
         var date_choose = new Date($(this).val())
-        if (date_now > date_choose) {
+        if (date_choose < date_now && !date_now.equals(date_choose)) {
             alert("Wrong date! Please select a date today or later.")
             var date_str = date_now.getFullYear() + "-"
                 + (date_now.getMonth() + 1 < 10 ? "0" + (date_now.getMonth() + 1) : date_now.getMonth() + 1) + "-"
