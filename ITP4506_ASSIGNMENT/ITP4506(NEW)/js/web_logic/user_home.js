@@ -35,11 +35,10 @@ $(document).ready(function () {
 
     // 我受不了了，随机创建列表
     var city = [
-        {"code": "HKG", "name": 'Hong Kong International'},
-        {"code": 'TYO', "name": 'Tokyo Metropolitan Area'},
-        {"code": 'TPE', "name": 'Taiwan Taoyuan International'},
-        {"code": 'SEL', "name": 'Gimpo International'},
-        {"code": 'LHR', "name": 'London Heathrow International'}
+        {"code": "HKG", "name": "Hong Kong International, China"},
+        {"code": 'PVG', "name": "Pudong International, Shanghai"},
+        {"code": 'TPE', "name": "Taoyuan International, Taipei"},
+        {"code": 'KIX', "name": "Kansai International, Osaka"}
     ]
     var how_many = 300
 
