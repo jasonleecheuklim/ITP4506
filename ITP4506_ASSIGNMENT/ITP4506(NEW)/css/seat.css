@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     height: 100%;
     font-family: 'Trebuchet MS', sans-serif;
@@ -11,14 +12,61 @@ html {
 body {
     font-size: 16px;
     background-color: rgb(187, 218, 231);
-    border-style: solid;
+
 }
 
-.reminder{
+/*reminder*/
+
+.reminder {
     background-color: white;
-    padding: 20px;
+    padding: 10px;
+    border: 1px solid yellow;
 }
 
+.form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.form-title {
+    font-size: 24px;
+    text-align: left;
+    /*padding: 1em 0;*/
+}
+
+.form-content {
+    padding: 20px;
+    margin-bottom: 40px;
+    /*background-color: pink; !* debug *!*/
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /*outline: 1px solid deepskyblue; !* debug *!*/
+}
+
+.col {
+    /*outline: 1px solid orangered; !* debug *!*/
+}
+
+.col-1 {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col-3 {
+    flex: 3;
+}
+
+.form-field {
+    margin: 0.5em 0;
+}
+
+/*seatMap*/
 
 .title {
     color: rgb(0, 191, 255);
@@ -135,5 +183,5 @@ ol {
 }
 
 .seat input[type=checkbox]:checked + label {
-    background: #656e65;
+    background: red;
 }
