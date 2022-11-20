@@ -28,7 +28,7 @@ $(document).ready(function () {
     var booking_back = ""
 
     // 航班列表
-    var json = localStorage.getItem('json_list') == null ? [] : JSON.parse(localStorage.getItem('json_list'))
+    var json = sessionStorage.getItem('json_list') == null ? [] : JSON.parse(sessionStorage.getItem('json_list'))
     // 筛选后的列表
     // var screen_json = {'go':[], 'back': []}
     var screen_json = list_screening()
@@ -55,10 +55,11 @@ $(document).ready(function () {
             var to = city[rand2]['code']
 
             var date = new Date()
+            
             rand = date.getDate() + Math.floor(Math.random() * 30)
             date.setDate(rand)
 
-            console.log(date.getDate())
+            console.log(date.getMonth() + ", " + date.getDate())
 
             var date_str = date.getFullYear() + "-"
                 + (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-"
@@ -92,7 +93,7 @@ $(document).ready(function () {
     if (json.length == 0) {
         json = refresh_data()
 
-        localStorage.setItem('json_list', JSON.stringify(json))
+        sessionStorage.setItem('json_list', JSON.stringify(json))
     }
 
     // 更新前端select
