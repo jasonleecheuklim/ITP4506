@@ -24,6 +24,14 @@ $(document).ready(function () {
     }
 
     // 显示资料
-    $("#go_detail p").append(JSON.stringify(json[Number(GET['go'])]))
-    $("#back_detail p").append(JSON.stringify(json[Number(GET['back'])]))
+    go = json[Number(GET['go'])]
+
+    $('#go_day').html(go.date)
+    $('#from_to').html(go.from + " - " + go.to)
+    $('#go_hour').html("Hour: " + go.hr)
+    $('#fight_id').html("Fight ID: " + go.id)
+    $('#price').html("Price: " + go.price)
+    
+    // $("#go_detail p").append(JSON.stringify(json[Number(GET['go'])]))
+    // $("#back_detail p").append(JSON.stringify(json[Number(GET['back'])]))
 })
