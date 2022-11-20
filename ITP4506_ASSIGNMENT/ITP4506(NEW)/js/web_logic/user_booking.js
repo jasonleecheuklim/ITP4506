@@ -27,11 +27,18 @@ $(document).ready(function () {
     go = json[Number(GET['go'])]
 
     $('#go_day').html(go.date)
-    $('#from_to').html(go.from + " - " + go.to)
-    $('#go_hour').html("Hour: " + go.hr)
-    $('#fight_id').html("Fight ID: " + go.id)
-    $('#price').html("Price: " + go.price)
-    
+    $('#go_from_to').html(go.from + " to " + go.to)
+    $('#go_hour').html(go.hr + "h 10m")
+    $('#go_flight_id').html("IVE " + go.id)
+    $('#go_price').html("Total HKD " + go.price)
+
     // $("#go_detail p").append(JSON.stringify(json[Number(GET['go'])]))
     // $("#back_detail p").append(JSON.stringify(json[Number(GET['back'])]))
+    back = json[Number(GET['back'])]
+
+    $('#back_day').html(back.date)
+    $('#back_from_to').html(back.from + " to " + back.to)
+    $('#back_hour').html(back.hr + "h 10m")
+    $('#back_flight_id').html("IVE " + back.id)
+    $('#back_price').html("Total HKD " + back.price)
 })
