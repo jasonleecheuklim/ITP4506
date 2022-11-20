@@ -58,6 +58,8 @@ $(document).ready(function () {
             rand = date.getDate() + Math.floor(Math.random() * 30)
             date.setDate(rand)
 
+            console.log(date.getDate())
+
             var date_str = date.getFullYear() + "-"
                 + (date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) + "-"
                 + (date.getDate() < 10 ? "0" + date.getDate() : date.getDate())
@@ -147,8 +149,9 @@ $(document).ready(function () {
     $("input[type='date']").change(function () {
         // alert($(this).val())
         var date_now = new Date()
+        date_now.setDate(date_now.getDate() - 1)
         var date_choose = new Date($(this).val())
-        if (date_choose < date_now && !date_now.equals(date_choose)) {
+        if (date_choose < date_now) {
             alert("Wrong date! Please select a date today or later.")
             var date_str = date_now.getFullYear() + "-"
                 + (date_now.getMonth() + 1 < 10 ? "0" + (date_now.getMonth() + 1) : date_now.getMonth() + 1) + "-"
@@ -337,7 +340,7 @@ $(document).ready(function () {
             (booking_go)
             && (GET['travel'] == 'one_way' ? true : booking_back)
         ) {
-            window.location.href = "booking.html?go=" + booking_go + "&back=" + booking_back
+            window.location.href = "seat.html?go=" + booking_go + "&back=" + booking_back
         } else {
 
             var str = ""
