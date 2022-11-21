@@ -142,7 +142,7 @@ ol {
     padding: 0;
     margin: 0;
 }
-
+/*seat1*/
 .seats {
     display: flex;
     flex-direction: row;
@@ -185,5 +185,46 @@ ol {
 }
 
 .seat input[type=checkbox]:checked + label {
+    background: red;
+}
+
+/*seat2*/
+
+
+.seat2 {
+    display: flex;
+    flex: 0 0 14.28%;
+    padding: 5px;
+    position: relative;
+}
+
+.seat2 label {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 1.5rem;
+    padding: 4px 0;
+    background: yellow;
+    border-radius: 5px;
+    color: black;
+}
+
+.seat2 label:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0px 2px green;
+}
+
+.seat2:nth-child(3) {
+    margin-right: 14%;
+}
+
+.seat2 input[type=checkbox] {
+    position: absolute;
+}
+
+.seat2 input[type=checkbox]:checked + label {
     background: red;
 }

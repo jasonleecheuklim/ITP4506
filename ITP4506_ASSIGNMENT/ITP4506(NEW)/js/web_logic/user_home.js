@@ -181,7 +181,7 @@ $(document).ready(function () {
                 + "<td>" + value.to + "</td>"
                 + "<td>" + value.date + "</td>"
                 + "<td>$ " + value.price + "</td>"
-                + "<td>" + value.hr + " h</td>"
+                + "<td>" + value.hr + " h 10m</td>"
                 + "</tr>"
 
             if (y < one_page_num)
