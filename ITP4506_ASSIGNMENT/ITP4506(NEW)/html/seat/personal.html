@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="../../css/personal.css">
 
 </head>
+<body>
 
 <header>
     <div class="header-bottom">
@@ -45,81 +46,185 @@
                 Privacy Policy
             </h6>
             <div class="form-title">
-                <h4 class="title" style="text-align: left;padding-top: 10px;padding-bottom: 0;">
+                <h4 class="title form-field" style="text-align: left;padding-top: 10px;padding-bottom: 0;">
                     Passenger information</h4></div>
-            <h7>Please enter all details exactly as they appear on this
-                passenger's passport. Tips for inputting passenger name
-                All fields are required unless marked as optional.
-            </h7>
+            <div class="form-field">
+                <h7>Please enter all details exactly as they appear on this
+                    passenger's passport. Tips for inputting passenger name
+                    All fields are required unless marked as optional.
+                </h7>
+            </div>
 
 
-            <div class="row" id="go_day"></div> <!--date-->
             <div class="row">
                 <div class="col col-1 form-field">
-                    <div class="row" id="go_from_to">
+                    <div class="row miniTitle" >Adult
                     </div>
-                    <div class="row" id="go_hour">
+                    <div class="row miniTitle" ><b>Passenger 1</b>
                     </div>
-                </div>
-
-                <div class="col col-1 form-field" id="go_flight_id"></div>
-
-
-                <div class="col col-1 form-field">
-                    <div class="row" id="go_price"></div>
-                    <div class="row" id="first_class_go_price"></div>
-                </div>
-
-
-                <div class="col col-1 form-field button_container">
-                    <button id="departure_button" type="reset" class="button"
-                            onclick="location.href ='../home/user.html'">
-                        Select another flight
-                    </button>
                 </div>
             </div>
+
+            <div class="form-field">
+                Order Date: 2022-11-23
+            </div>
+            <div class="form-field">
+                Departure Date: 2022-11-30
+            </div>
+            <div class="form-field">
+                Destination: HKG to SVG
+            </div>
+            <div class="form-field">
+                Flight No: IVE-348
+            </div>
+            <div class="form-field">&nbsp</div>
+            <div class="form-field">
+                 Return Date: 2022-12-01
+            </div>
+            <div class="form-field">
+                Destination: SVG to HKG
+            </div>
+            <div class="form-field">
+                Flight No: IVE-247
+            </div>
+            <div class="form-field">&nbsp</div>
+            <div class="form-field">
+                <label>
+                    Title:
+                    <input type="text" name="username" class="rounded" required/>
+                </label>
+            </div>
+
+            <div class="row">
+                <div class="col-1 form-field">
+                    <label>
+                        Family name
+                        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+                    </label>
+                </div>
+                <div class="col-1 form-field">
+                    <label>
+                        Given name
+                        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+                    </label>
+                </div>
+                <div class="col-1 form-field">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1 form-field">
+                    <label>
+                        Nationality
+                        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+                    </label>
+                </div>
+                <div class="col-1 form-field">
+                    <label>
+                        Passport Number:
+                        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+                    </label>
+                </div>
+                <div class="col-1 form-field">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <div class="row miniTitle">Adult
+                    </div>
+                    <div class="row miniTitle"><b>Passenger 2</b>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-field">
+                Order Date: 2022-11-23
+            </div>
+            <div class="form-field">
+                Departure Date: 2022-11-30
+            </div>
+            <div class="form-field">
+                Destination: HKG to SVG
+            </div>
+            <div class="form-field">
+                Flight No: IVE-348
+            </div>
+            <div class="form-field">&nbsp</div>
+            <div class="form-field">
+                Return Date: 2022-12-01
+            </div>
+            <div class="form-field">
+                Destination: SVG to HKG
+            </div>
+            <div class="form-field">
+                Flight No: IVE-247
+            </div>
+            <div class="form-field">&nbsp</div>
+            <div class="form-field">
+                <label>
+                    Title:
+                    <input type="text" name="username" class="rounded" required/>
+                </label>
+            </div>
+
+            <div class="row">
+                <div class="col-1 form-field">
+                    <label>
+                        Family name
+                        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+                    </label>
+                </div>
+                <div class="col-1 form-field">
+                    <label>
+                        Given name
+                        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+                    </label>
+                </div>
+                <div class="col-1 form-field">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1 form-field">
+                    <label>
+                        Nationality
+                        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+                    </label>
+                </div>
+                <div class="col-1 form-field">
+                    <label>
+                        Passport Number:
+                        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+                    </label>
+                </div>
+                <div class="col-1 form-field">
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <div class="button_container">
+                        <button id="back" type="button" class="button">
+                            Back
+                        </button>
+                    </div>
+                </div>
+                <div class="col col-1 form-field">
+                    <div class="button_container">
+                        <button id="login" form="register_form" type="submit" class="button1">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+
         </form>
     </div>
-</div>
-
-
-<div class="col form-field">
-    <label>
-        User Email:
-        <input type="text" name="username" class="rounded" required/>
-    </label>
-</div>
-<div class="col form-field">
-    <label>
-        Password: (It must be at least 8 characters in length)
-        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
-    </label>
-</div>
-<div class="col form-field">
-    <label>
-        Confirm Password:
-        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
-    </label>
-</div>
-
-<div class="row">
-    <div class="col col-1 form-field">
-        <div class="button_container">
-            <button id="back" type="button" class="button">
-                Back
-            </button>
-        </div>
-    </div>
-    <div class="col col-1 form-field">
-        <div class="button_container">
-            <button id="login" form="register_form" type="submit" class="button1">Submit</button>
-        </div>
-    </div>
-</div>
-</h4>
-</h6>
-</form>
-</div>
 </div>
 
 
