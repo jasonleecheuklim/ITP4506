@@ -21,6 +21,7 @@ $(document).ready(function () {
     // 视情况隐藏back
     if (!GET['back']) {
         $("#back_detail").hide()
+        $("#Returning_Flight").hide()
     }
 
     // 显示资料
