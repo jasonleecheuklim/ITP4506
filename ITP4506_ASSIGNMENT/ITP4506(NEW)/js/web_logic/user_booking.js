@@ -31,7 +31,8 @@ $(document).ready(function () {
     $('#go_from_to').html(go.from + " to " + go.to)
     $('#go_hour').html(go.hr + "h 10m")
     $('#go_flight_id').html("IVE " + go.id)
-    $('#go_price').html("Total HKD " + go.price)
+    $('#go_price').html("Business Class: HKD " + go.price)
+    $('#first_class_go_price').html("First Class: HKD " + (go.price * 2))
 
     // $("#go_detail p").append(JSON.stringify(json[Number(GET['go'])]))
     // $("#back_detail p").append(JSON.stringify(json[Number(GET['back'])]))
@@ -41,5 +42,6 @@ $(document).ready(function () {
     $('#back_from_to').html(back.from + " to " + back.to)
     $('#back_hour').html(back.hr + "h 10m")
     $('#back_flight_id').html("IVE " + back.id)
-    $('#back_price').html("Total HKD " + back.price)
+    $('#back_price').html("Business Class: HKD " + back.price)
+    $('#first_class_back_price').html("First Class: HKD " + (back.price * 2))
 })

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+
+    <script type="text/javascript" src="../../js/vendor/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/js.cookie.js"></script>
+    <script type="text/javascript" src="../../js/web_logic/user_booking.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#register_form").submit(function () {
+                alert("Submitted successfully")
+            })
+
+            $("#back").click(function () {
+                window.location.href = "login.html"
+            })
+        })
+    </script>
+
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/personal.css">
+
+</head>
+
+<header>
+    <div class="header-bottom">
+        <a href="../login.html">
+            <img src="../../img/logo.png" alt="Girl in a jacket">
+        </a>
+    </div>
+</header>
+<div class="container">
+    <h1 class="title">Complete all passenger information</h1>
+
+
+    <div class="form">
+        <form id="register_form" class="form-content" action="../loading.html">
+            <h6>IVE Airline uses personal information/data about you to operate our business in accordance with our
+                Privacy Policy
+            </h6>
+            <div class="form-title">
+                <h4 class="title" style="text-align: left;padding-top: 10px;padding-bottom: 0;">
+                    Passenger information</h4></div>
+            <h7>Please enter all details exactly as they appear on this
+                passenger's passport. Tips for inputting passenger name
+                All fields are required unless marked as optional.
+            </h7>
+
+
+            <div class="row" id="go_day"></div> <!--date-->
+            <div class="row">
+                <div class="col col-1 form-field">
+                    <div class="row" id="go_from_to">
+                    </div>
+                    <div class="row" id="go_hour">
+                    </div>
+                </div>
+
+                <div class="col col-1 form-field" id="go_flight_id"></div>
+
+
+                <div class="col col-1 form-field">
+                    <div class="row" id="go_price"></div>
+                    <div class="row" id="first_class_go_price"></div>
+                </div>
+
+
+                <div class="col col-1 form-field button_container">
+                    <button id="departure_button" type="reset" class="button"
+                            onclick="location.href ='../home/user.html'">
+                        Select another flight
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="col form-field">
+    <label>
+        User Email:
+        <input type="text" name="username" class="rounded" required/>
+    </label>
+</div>
+<div class="col form-field">
+    <label>
+        Password: (It must be at least 8 characters in length)
+        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+    </label>
+</div>
+<div class="col form-field">
+    <label>
+        Confirm Password:
+        <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
+    </label>
+</div>
+
+<div class="row">
+    <div class="col col-1 form-field">
+        <div class="button_container">
+            <button id="back" type="button" class="button">
+                Back
+            </button>
+        </div>
+    </div>
+    <div class="col col-1 form-field">
+        <div class="button_container">
+            <button id="login" form="register_form" type="submit" class="button1">Submit</button>
+        </div>
+    </div>
+</div>
+</h4>
+</h6>
+</form>
+</div>
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        <h3>IVE Airlines</h3>
+        <p>Your safety and well-being matter to us. That’s why we are committed to putting meticulous care at every
+            stage of your journey, to provide you with a peace of mind when travelling with IVE Airlines. </p>
+    </div>
+    <div class="footer-bottom">
+
+        <div class="footer-menu">
+            <ul class="f-menu">
+                <li><a href="https://it.vtc.edu.hk/">Home</a></li>
+                <li><a href="https://it.vtc.edu.hk/en/about-us/">About Us</a></li>
+                <li><a href="https://it.vtc.edu.hk/en/contact-us/">Contact Us</a></li>
+                <li><a href="https://it.vtc.edu.hk/en/news/">News & Events</a></li>
+            </ul>
+        </div>
+        <p>copyright &copy; <a href="#">IVE Airline Company</a></p>
+    </div>
+
+</footer>
+
+</body>
+</html>
