@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Payment</title>
+
+    <script type="text/javascript" src="../../js/vendor/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/js.cookie.js"></script>
+    <script type="text/javascript" src="../../js/web_logic/user_booking.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#payment_form").submit(function () {
+                alert("Submitted successfully")
+            })
+
+            $("#back").click(function () {
+                window.location.href = "login.html"
+            })
+        })
+    </script>
+
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/payment.css">
+
+</head>
+<body>
+
+<header>
+    <div class="header-bottom">
+        <a href="../login.html">
+            <img src="../../img/logo.png" alt="Girl in a jacket">
+        </a>
+    </div>
+</header>
+
+
+<div class="form">
+    <h1 class="title">Complete the payment</h1>
+
+    <div class="form">
+        <form id="payment_form" class="form-content" action="../loading_3.html">
+            <h6 style="padding-bottom: 10px">IVE Airline uses personal information/data about you to operate our
+                business in accordance with our
+                Privacy Policy
+            </h6>
+
+            <div class="row">
+
+
+                <div class="col-75">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-50">
+                                <h3 style="padding: 10px 0 10px 0">Billing Address</h3>
+                                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                <input type="text" id="email" name="email" placeholder="john@example.com">
+                                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                <label for="city"><i class="fa fa-institution"></i> City</label>
+                                <input type="text" id="city" name="city" placeholder="New York">
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" name="state" placeholder="NY">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="zip">Zip</label>
+                                        <input type="text" id="zip" name="zip" placeholder="10001">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-50">
+                                <h3 style="padding: 10px 0 10px 0">Payment</h3>
+                                <label for="fname">Credit Card or Debit Card</label>
+                                <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                </div>
+                                <label for="cname">Name on Card</label>
+                                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                <label for="ccnum">Credit card number</label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                <label for="expmonth">Exp Month</label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="expyear">Exp Year</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label>
+                            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                        </label>
+                        <input type="submit" value="Confirm Payment" class="btn">
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div class="container">
+                        <h4 style="padding: 10px 0 10px 0">Cart
+                            <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart"></i>
+          <b>4</b>
+        </span>
+                        </h4>
+                        <p style="padding-bottom: 10px"><a>Passenger 1</a> <span class="price" >$56849</span></p>
+                        <p style="padding-bottom: 10px"><a>Passenger 2</a> <span class="price">$56849</span></p>
+                        <p style="padding-bottom: 10px"><a>Seat reservation</a> <span class="price">$0</span></p>
+                        <p style="padding-bottom: 10px"><a>Meal x 4</a> <span class="price">$2000</span></p>
+                        <hr>
+                        <p style="padding-top: 10px">Total <span class="price" style="color:black"><b>$113698</b></span></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <h3>IVE Airlines</h3>
+        <p>Your safety and well-being matter to us. That’s why we are committed to putting meticulous care at every
+            stage of your journey, to provide you with a peace of mind when travelling with IVE Airlines. </p>
+    </div>
+    <div class="footer-bottom">
+
+        <div class="footer-menu">
+            <ul class="f-menu">
+                <li><a href="https://it.vtc.edu.hk/">Home</a></li>
+                <li><a href="https://it.vtc.edu.hk/en/about-us/">About Us</a></li>
+                <li><a href="https://it.vtc.edu.hk/en/contact-us/">Contact Us</a></li>
+                <li><a href="https://it.vtc.edu.hk/en/news/">News & Events</a></li>
+            </ul>
+        </div>
+        <p>copyright &copy; <a href="#">IVE Airline Company</a></p>
+    </div>
+
+</footer>
+
+</body>
+</html>

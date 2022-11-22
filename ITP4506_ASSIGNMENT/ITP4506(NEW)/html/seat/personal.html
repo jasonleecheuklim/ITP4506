@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#register_form").submit(function () {
+            $("#personal_form").submit(function () {
                 alert("Submitted successfully")
             })
 
@@ -41,7 +41,7 @@
 
 
     <div class="form">
-        <form id="register_form" class="form-content" action="../loading.html">
+        <form id="personal_form" class="form-content" action="../loading_2.html">
             <h6>IVE Airline uses personal information/data about you to operate our business in accordance with our
                 Privacy Policy
             </h6>
@@ -58,36 +58,72 @@
 
             <div class="row">
                 <div class="col col-1 form-field">
-                    <div class="row miniTitle" >Adult
+                    <div class="row miniTitle">Adult
                     </div>
-                    <div class="row miniTitle" ><b>Passenger 1</b>
+                    <div class="row miniTitle"><b>Passenger 1</b>
                     </div>
                 </div>
             </div>
 
             <div class="form-field">
-                Order Date: <nobr id="order_date"></nobr>
+                Order Date:
+                <nobr id="order_date"></nobr>
+            </div>
+            <div class="form-field">&nbsp</div>
+            <div class="form-field">
+                Departure Date:
+                <nobr id="go_day"></nobr>
             </div>
             <div class="form-field">
-                Departure Date: <nobr id="go_day"></nobr>
+                Destination:
+                <nobr id="go_from_to"></nobr>
             </div>
             <div class="form-field">
-                Destination: <nobr id="go_from_to"></nobr>
+                Flight No:
+                <nobr id="go_flight_id"></nobr>
             </div>
+
             <div class="form-field">
-                Flight No: <nobr id="go_flight_id"></nobr>
+                    <fieldset>
+                        <legend>Do you want to order your meal for this trip? (Additional $500)</legend>
+                        <div>
+                            <input type="radio" id="contactChoice1" name="contact" value="yes"/>
+                            <label for="contactChoice1">Yes</label>
+
+                            <input type="radio" id="contactChoice2" name="contact" value="no"/>
+                            <label for="contactChoice2">No</label>
+                        </div>
+                    </fieldset>
             </div>
+
             <div class="form-field">&nbsp</div>
             <div id="back_detail">
                 <div class="form-field">
-                    Return Date: <nobr id="back_day"></nobr>
+                    Return Date:
+                    <nobr id="back_day"></nobr>
                 </div>
                 <div class="form-field">
-                    Destination: <nobr id="back_from_to"></nobr>
+                    Destination:
+                    <nobr id="back_from_to"></nobr>
                 </div>
                 <div class="form-field">
-                    Flight No: <nobr id="back_flight_id"></nobr>
+                    Flight No:
+                    <nobr id="back_flight_id"></nobr>
                 </div>
+
+                <div class="form-field">
+                    <fieldset>
+                        <legend>Do you want to order your meal for this trip? (Additional $500)</legend>
+                        <div>
+                            <input type="radio" id="contactChoice7" name="contact" value="yes"/>
+                            <label for="contactChoice1">Yes</label>
+
+                            <input type="radio" id="contactChoice8" name="contact" value="no"/>
+                            <label for="contactChoice2">No</label>
+                        </div>
+                    </fieldset>
+                </div>
+
             </div>
             <div class="form-field">&nbsp</div>
             <div class="form-field">
@@ -100,13 +136,13 @@
             <div class="row">
                 <div class="col-1 form-field">
                     <label>
-                        Family name
+                        Family name:
                         <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
                     </label>
                 </div>
                 <div class="col-1 form-field">
                     <label>
-                        Given name
+                        Given name:
                         <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
                     </label>
                 </div>
@@ -117,7 +153,7 @@
             <div class="row">
                 <div class="col-1 form-field">
                     <label>
-                        Nationality
+                        Nationality:
                         <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
                     </label>
                 </div>
@@ -141,30 +177,65 @@
             </div>
 
 
+            <div class="form-field">
+                Order Date:
+                <nobr id="order_date"></nobr>
+            </div>
+            <div class="form-field">&nbsp</div>
+            <div class="form-field">
+                Departure Date:
+                <nobr id="go_day"></nobr>
+            </div>
+            <div class="form-field">
+                Destination:
+                <nobr id="go_from_to"></nobr>
+            </div>
+            <div class="form-field">
+                Flight No:
+                <nobr id="go_flight_id"></nobr>
+            </div>
 
             <div class="form-field">
-                Order Date: <nobr id="order_date"></nobr>
+                <fieldset>
+                    <legend>Do you want to order your meal for this trip? (Additional $500)</legend>
+                    <div>
+                        <input type="radio" id="contactChoice3" name="contact" value="yes"/>
+                        <label for="contactChoice1">Yes</label>
+
+                        <input type="radio" id="contactChoice4" name="contact" value="no"/>
+                        <label for="contactChoice2">No</label>
+                    </div>
+                </fieldset>
             </div>
-            <div class="form-field">
-                Departure Date: <nobr id="go_day"></nobr>
-            </div>
-            <div class="form-field">
-                Destination: <nobr id="go_from_to"></nobr>
-            </div>
-            <div class="form-field">
-                Flight No: <nobr id="go_flight_id"></nobr>
-            </div>
+
             <div class="form-field">&nbsp</div>
             <div id="back_detail">
                 <div class="form-field">
-                    Return Date: <nobr id="back_day"></nobr>
+                    Return Date:
+                    <nobr id="back_day"></nobr>
                 </div>
                 <div class="form-field">
-                    Destination: <nobr id="back_from_to"></nobr>
+                    Destination:
+                    <nobr id="back_from_to"></nobr>
                 </div>
                 <div class="form-field">
-                    Flight No: <nobr id="back_flight_id"></nobr>
+                    Flight No:
+                    <nobr id="back_flight_id"></nobr>
                 </div>
+
+                <div class="form-field">
+                    <fieldset>
+                        <legend>Do you want to order your meal for this trip? (Additional $500)</legend>
+                        <div>
+                            <input type="radio" id="contactChoice5" name="contact" value="yes"/>
+                            <label for="contactChoice1">Yes</label>
+
+                            <input type="radio" id="contactChoice6" name="contact" value="no"/>
+                            <label for="contactChoice2">No</label>
+                        </div>
+                    </fieldset>
+                </div>
+
             </div>
             <div class="form-field">&nbsp</div>
             <div class="form-field">
@@ -177,13 +248,13 @@
             <div class="row">
                 <div class="col-1 form-field">
                     <label>
-                        Family name
+                        Family name:
                         <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
                     </label>
                 </div>
                 <div class="col-1 form-field">
                     <label>
-                        Given name
+                        Given name:
                         <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
                     </label>
                 </div>
@@ -194,7 +265,7 @@
             <div class="row">
                 <div class="col-1 form-field">
                     <label>
-                        Nationality
+                        Nationality:
                         <input type="password" name="password" pattern=".{8,}" class="rounded" required/>
                     </label>
                 </div>
@@ -209,8 +280,6 @@
             </div>
 
 
-
-
             <div class="row">
                 <div class="col col-1 form-field">
                     <div class="button_container">
@@ -221,7 +290,7 @@
                 </div>
                 <div class="col col-1 form-field">
                     <div class="button_container">
-                        <button id="login" form="register_form" type="submit" class="button1">Submit</button>
+                        <button id="login" form="personal_form" type="submit" class="button1">Submit</button>
                     </div>
                 </div>
             </div>
