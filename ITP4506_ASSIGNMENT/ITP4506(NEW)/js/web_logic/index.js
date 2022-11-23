@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
     var json = [
-        {user: 'a001', pass: 'a001', type: 'user'},
-        {user: 'a002', pass: 'a002', type: 'admin'},
-        {user: 'root', pass: 'root', type: 'operator'}
+        {user: 'a001', pass: 'a001', type: 'user/seat'},
+        {user: 'a002', pass: 'a002', type: 'home/admin'},
+        {user: 'root', pass: 'root', type: 'home/operator'}
     ]
 
     $("#login_form").submit(function () {
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
                 if (value.pass == pass) { // 登录成功
                     succ = value.type;
-                    str = "Welcome! " + succ;
+                    str = "Welcome to IVE Airline! ";
                     return false;
 
                 } else {  // 密码错误
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         // 页面跳转
         if (succ) {
-            $("#login_form").attr("action", "home/" + succ + ".html");
+            $("#login_form").attr("action", "" + succ + ".html");
         }
     })
 })

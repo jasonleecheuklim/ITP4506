@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
+    <title>Seat</title>
 
     <script type="text/javascript" src="../../js/vendor/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/js.cookie.js"></script>
@@ -20,8 +20,13 @@
 
 <header>
     <div class="header-bottom">
-        <a href="../login.html">
-            <img src="../../img/logo.png" alt="Girl in a jacket">
+        <div class="header-menu">
+            <ul class="f-menu">
+                <li><a href="../loading.html">Log-out</a></li>
+            </ul>
+        </div>
+        <a href="../home/user.html">
+            <img src="../../img/logo.png" alt="flight">
         </a>
     </div>
 </header>
@@ -747,7 +752,7 @@
 
 <script>
     function toggleResults() {
-        alert("Can't select more than 2 seats")
+        alert("Can't select more than 2 seats");
         location.reload();
     }
 </script>

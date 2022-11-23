@@ -343,7 +343,7 @@ $(document).ready(function () {
         ) {
             sessionStorage.setItem("booking_go", booking_go)
             sessionStorage.setItem("booking_back", booking_back)
-            window.location.href = "user.html"
+            window.location.href = "../login.html"
             // 不用get了！
             // window.location.href = "user.html?go=" + booking_go + "&back=" + booking_back
         } else {

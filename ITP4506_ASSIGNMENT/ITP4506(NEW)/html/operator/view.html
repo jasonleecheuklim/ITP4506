@@ -16,8 +16,13 @@
 
 <header>
     <div class="header-bottom">
-        <a href="../login.html">
-            <img src="../../img/logo.png" alt="Girl in a jacket">
+        <div class="header-menu">
+            <ul class="f-menu">
+                <li><a href="../loading.html">Log-out</a></li>
+            </ul>
+        </div>
+        <a href="../home/user.html">
+            <img src="../../img/logo.png" alt="flight">
         </a>
     </div>
 </header>
@@ -40,7 +45,9 @@
                             </div>
                             <div class="form-field">
                                 <div>
-                                    <button id="btn_detail_1" type="button" class="button">Detail</button>
+                                    <button id="btn_detail_1" type="button" class="button" onclick="toggleResults_1()">
+                                        Detail
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +65,7 @@
                         </div>
                     </div>
 
-                    <div id="detail_1">
+                    <div id="detail_1" style="display: none">
 
                         <div class="row">
                             <div class="col col-1 form-field"
@@ -111,7 +118,7 @@
                                 </div>
                             </div>
 
-                            <div class="col col-1 form-field">
+                            <div class="col col-1 form-field" style="background-color: whitesmoke;border-left-style: solid; border-left-color: red">
                                 <div class="form-field">
                                     Returning Date: 2022-11-24
                                 </div>
@@ -129,23 +136,19 @@
                         </div>
 
                         <div class="row">
-                            <div class="col col-1 form-field" style="background-color: whitesmoke">
-                                <button id="btn_edit_1" type="button" class="button">Edit Booking</button>
+                            <div class="col col-1 form-field" style="background-color: whitesmoke; text-align: center">
+                                <button id="btn_edit_1" type="button" class="button" onclick="toggleResults_3()">Edit Booking</button>
 
                             </div>
 
-                            <div class="col col-1 form-field" style="background-color: whitesmoke">
-                                <button id="btn_delete_1" type="button" class="button">Delete Booking</button>
+                            <div class="col col-1 form-field" style="background-color: whitesmoke; text-align: center;">
+                                <button id="btn_delete_1" type="button" class="button" onclick="toggleResults_4()">Delete Booking</button>
 
 
                             </div>
                         </div>
-
-
                     </div>
-
                 </div>
-
             </div>
 
 
@@ -155,11 +158,13 @@
                 <div class="row">
                     <div class="col col-1 form-field">
                         <div class="form-field">
-                            Booking No: 20221123-001
+                            Booking No: 20221122-018
                         </div>
                         <div class="form-field">
                             <div>
-                                <button id="detail_2" type="button" class="button">Detail</button>
+                                <button id="btn_detail_2" type="button" class="button" onclick="toggleResults_2()">
+                                    Detail
+                                </button>
 
                             </div>
                         </div>
@@ -167,27 +172,146 @@
 
                     <div class="col col-1 form-field">
                         <div class="form-field">
-                            Order Date:
+                            Order Date: 2022-11-18
                         </div>
                     </div>
 
                     <div class="col col-1 form-field">
                         <div class="form-field">
-                            Status:
+                            Status: Pending
                         </div>
                     </div>
                 </div>
+
+                <div id="detail_2" style="display: none">
+
+                    <div class="row">
+                        <div class="col col-1 form-field"
+                             style="background-color: whitesmoke;border-top-style: solid; border-top-color: red">
+                            <div class="form-field">
+                                Order Date: 2022-11-18
+                            </div>
+                            <div class="form-field">&nbsp</div>
+
+                            <div class="form-field">
+                                Passenger 1: Mr. Lee, Cheuk Lim
+                            </div>
+                            <div class="form-field">
+                                Nationality: Chinese
+                            </div>
+                            <div class="form-field">
+                                Passport Number: 012345678
+                            </div>
+                            <div class="form-field">&nbsp</div>
+                            <div class="form-field">
+                                Passenger 2: Miss. Li, Han Tzi
+                            </div>
+                            <div class="form-field">
+                                Nationality: Chinese
+                            </div>
+                            <div class="form-field">
+                                Passport Number: 012398764
+                            </div>
+                        </div>
+
+                        <div class="col col-1 form-field"
+                             style="background-color: whitesmoke;border-top-style: solid; border-top-color: red">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col col-1 form-field" style="background-color: whitesmoke">
+                            <div class="form-field">
+                                Departure Date: 2022-11-23
+                            </div>
+                            <div class="form-field">
+                                Destination: HKG - PYG
+                            </div>
+                            <div class="form-field">
+                                Flight No: IVE-123
+                            </div>
+                            <div class="form-field">
+                                Additional meal: 2
+                            </div>
+                        </div>
+
+                        <div class="col col-1 form-field" style="background-color: whitesmoke;border-left-style: solid; border-left-color: red">
+                            <div class="form-field">
+                                Returning Date: 2022-11-24
+                            </div>
+                            <div class="form-field">
+                                Destination: PYG - HKG
+                            </div>
+                            <div class="form-field">
+                                Flight No: IVE-321
+                            </div>
+                            <div class="form-field">
+                                Additional meal: 2
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col col-1 form-field" style="background-color: whitesmoke; text-align: center">
+                            <button id="btn_edit_2" type="button" class="button" onclick="toggleResults_5()">Edit Booking</button>
+
+                        </div>
+
+                        <div class="col col-1 form-field" style="background-color: whitesmoke; text-align: center;">
+                            <button id="btn_delete_2" type="button" class="button" onclick="toggleResults_6()">Delete Booking</button>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
         </form>
     </div>
-    </form>
-</div>
-fffff
 
-</form>
 </div>
-</div>
+
+<script>
+    function toggleResults_1() {
+
+        let div = document.getElementById('detail_1');
+        if (div.style.display === 'none') {
+            div.style.display = '';
+        }
+    }
+
+    function toggleResults_2() {
+        let div2 = document.getElementById('detail_2');
+        if (div2.style.display === 'none') {
+            div2.style.display = '';
+            // } else {
+            //     div.style.display = 'none';
+        }
+    }
+
+    function toggleResults_3() {
+        alert("Booking updated");
+        window.location.href = '../home/user.html';
+    }
+    function toggleResults_4() {
+        alert("Booking deleted");
+        window.location.href = '../home/user.html';
+    }
+    function toggleResults_5() {
+        alert("Booking updated");
+        window.location.href = '../home/user.html';
+    }
+    function toggleResults_6() {
+        alert("Booking deleted");
+        window.location.href = '../home/user.html';
+    }
+
+
+</script>
 
 
 <footer>
