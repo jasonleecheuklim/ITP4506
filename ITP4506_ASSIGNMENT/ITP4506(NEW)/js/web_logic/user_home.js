@@ -343,9 +343,9 @@ $(document).ready(function () {
         ) {
             sessionStorage.setItem("booking_go", booking_go)
             sessionStorage.setItem("booking_back", booking_back)
-            window.location.href = "seat.html"
+            window.location.href = "user.html"
             // 不用get了！
-            // window.location.href = "seat.html?go=" + booking_go + "&back=" + booking_back
+            // window.location.href = "user.html?go=" + booking_go + "&back=" + booking_back
         } else {
 
             var str = ""

@@ -28,7 +28,7 @@
 
 <form id="seat_form" action="personal.html">
     <div class="reminder">
-        <div id="go_detail" >
+        <div id="go_detail">
             <div class="form-title"><h4 class="title" style="text-align: left;padding-top: 10px;padding-bottom: 0;">
                 Departing flight</h4></div>
             <div class="form-content">
@@ -51,7 +51,7 @@
 
 
                     <div class="col col-1 form-field button_container">
-                        <button id="departure_button" type="reset" class="button"
+                        <button id="departure_button" type="reset" class="button miniTitle" style="font-size: 17px"
                                 onclick="location.href ='../home/user.html'">
                             Select another flight
                         </button>
@@ -82,7 +82,7 @@
 
 
                     <div class="col col-1 form-field button_container">
-                        <button id="return_button" type="reset" class="button"
+                        <button id="departure_button" type="reset" class="button miniTitle" style="font-size: 17px"
                                 onclick="location.href ='../home/user.html'">
                             Select another flight
                         </button>
@@ -685,19 +685,41 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col col-1 form-field">
-            <div class="button_container">
-                <button id="back" type="button" class="button">
-                    Back
-                </button>
+
+    <div class="reminder">
+        <div class="form-content">
+            <div class="row">
+
+                <div class="col col-1 form-field" style="background-color: white">
+                    # Selected seat will not be counted
+                </div>
+
+
+                <div class="col col-1 form-field" style="background-color: white;font-size: 20px">
+                    <div class="button_container">
+                        <button id="back" type="button" class="button">
+                            # No fix seat
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="col col-1 form-field" style="background-color: white;font-size: 20px">
+                    <div class="button_container">
+                        <button id="login" form="seat_form" type="submit" class="button1">
+                            * Yes (+$2000 per Economy Class)
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="col col-1 form-field" style="background-color: white">
+                    * Free of charge for First Class passenger
+                </div>
+
             </div>
         </div>
-        <div class="col col-1 form-field">
-            <div class="button_container">
-                <button id="login" form="seat_form" type="submit" class="button1">Submit</button>
-            </div>
-        </div>
+
     </div>
 </form>
 
